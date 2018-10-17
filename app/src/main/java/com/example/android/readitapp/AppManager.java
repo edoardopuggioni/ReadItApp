@@ -21,6 +21,16 @@ public class AppManager
         quizStatus = null;
     }
 
+    public User getCurrentUser()
+    {
+        return currentUser;
+    }
+
+    public QuizStatus getQuizStatus()
+    {
+        return quizStatus;
+    }
+
     // If the login process is successful, return true.
     public Boolean loginUser( Integer cardNumber, String passwordHash )
     {
