@@ -1,5 +1,6 @@
 package com.example.android.readitapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -84,7 +85,6 @@ public class LoginActivity extends AppCompatActivity
             // user through the app manager, which has a field for this purpose. Furthermore,
             // every time we open a new activity we have to check if the user actually logged in,
             // and if not we have to start the LoginActivity.
-
         }
         else
         {
