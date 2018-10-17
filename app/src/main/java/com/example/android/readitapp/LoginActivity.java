@@ -3,6 +3,7 @@ package com.example.android.readitapp;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,11 +20,9 @@ public class LoginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //hiding the action bar
-        if (getSupportActionBar() != null)
-        {
-            getSupportActionBar().hide();
-        }
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        //getSupportActionBar().hide();
 
         appManager = AppManager.getInstance();
 
