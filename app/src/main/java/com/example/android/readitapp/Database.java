@@ -33,7 +33,7 @@ public class Database
         if( user == null )
             return null;
 
-        if( user.getPasswordHash() != passwordHash )
+        if( !user.getPasswordHash().equals(passwordHash) )
             return null;
 
         return user;
