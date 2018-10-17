@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class Database
 {
-    private FakeData fakeData;
-
     private static final Database ourInstance = new Database();
 
     public static Database getInstance()
@@ -15,11 +13,11 @@ public class Database
 
     private Database()
     {
-        fakeData = FakeData.getInstance();
     }
 
     public User getUserByCardAndPassword( Integer cardNumber, String passwordHash )
     {
+        FakeData fakeData = FakeData.getInstance();
         User user = null;
         ArrayList<User> users = fakeData.users;
 

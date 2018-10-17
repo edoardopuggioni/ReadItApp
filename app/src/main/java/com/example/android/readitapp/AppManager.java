@@ -7,7 +7,6 @@ public class AppManager
 {
     private User currentUser;
     private QuizStatus quizStatus;
-    private Database db;
 
     private static final AppManager ourInstance = new AppManager();
 
@@ -20,12 +19,13 @@ public class AppManager
     {
         currentUser = null;
         quizStatus = null;
-        db = Database.getInstance();
     }
 
     // If the login process is successful, return true.
     public Boolean loginUser( Integer cardNumber, String passwordHash )
     {
+        Database db = Database.getInstance();
+
         User user = db.getUserByCardAndPassword( cardNumber, passwordHash );
         if( user != null )
         {

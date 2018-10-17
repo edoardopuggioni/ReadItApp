@@ -34,12 +34,12 @@ public class FakeData
 
         pswHash = appManager.md5("password2");
         achievements = new Achievements();
-        user = new User( 00002, pswHash, "Alessandro", AgeGroupsEnum.DRAGONS, achievements );
+        user = new User( 00002, pswHash, "Alessandro", AgeGroupsEnum.TIGERS, achievements );
         users.add(user);
 
         pswHash = appManager.md5("password3");
         achievements = new Achievements();
-        user = new User( 00003, pswHash, "Alessandro", AgeGroupsEnum.DRAGONS, achievements );
+        user = new User( 00003, pswHash, "Alessandro", AgeGroupsEnum.BUNNIES, achievements );
         users.add(user);
     }
 }
