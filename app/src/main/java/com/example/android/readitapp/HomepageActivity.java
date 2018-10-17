@@ -34,14 +34,16 @@ public class HomepageActivity extends BaseActivity
         switch (view.getId())
         {
             case R.id.homepage_quiz_button:
-                Intent intent = new Intent(this, ChallengesActivity.class);
-                startActivity(intent);
+                Intent intentAchievements = new Intent(this, AchievementsActivity.class);
+                startActivity(intentAchievements);
                 break;
 
             case R.id.homepage_achievements_button:
                 break;
 
             case R.id.homepage_challenges_button:
+                Intent intentChallenges = new Intent(this, ChallengesActivity.class);
+                startActivity(intentChallenges);
                 break;
         }
     }
