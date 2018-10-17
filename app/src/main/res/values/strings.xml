@@ -5,4 +5,5 @@
     <string name="readit_achievements">ReadIt Achievements</string>
     <string name="readit_challenges">ReadIt Challenges</string>
     <string name="readit_quiz">ReadIt Quiz</string>
+    <string name="homepage_logout">Logout</string>
 </resources>

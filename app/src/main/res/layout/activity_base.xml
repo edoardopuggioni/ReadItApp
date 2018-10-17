@@ -14,9 +14,24 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:navigationIcon="@drawable/ic_action_home">
 
+    <TextView
 
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="points"
+        android:layout_gravity="right"
+        android:id="@+id/gemsAmount" />
+
+        <ImageView
+            android:id="@+id/ageGroupSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/default_picture"/>
+
+    </android.support.v7.widget.Toolbar>
 
 
 </android.support.constraint.ConstraintLayout>

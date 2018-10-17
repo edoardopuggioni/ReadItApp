@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class HomepageActivity extends BaseActivity
 {
     TextView welcomeMessagge;
@@ -24,7 +27,12 @@ public class HomepageActivity extends BaseActivity
         User currentUser = appManager.getCurrentUser();
 
         welcomeMessagge = findViewById(R.id.homepage_welcome);
-        welcomeMessagge.setText("Welcome " + currentUser.getFirstName() + "!");
+        ArrayList<Book> borrowedBooks = currentUser.getBorrowedBooks();
+        String borrowedBooksString = "";
+        for(Book i: borrowedBooks){
+            borrowedBooksString+=i.getTitle();
+        }
+        welcomeMessagge.setText("Welcome " + currentUser.getFirstName() + "! \n Your current books are:\n"+borrowedBooksString );
         initToolbar(R.id.toolbar);
     }
 
@@ -44,6 +52,11 @@ public class HomepageActivity extends BaseActivity
             case R.id.homepage_challenges_button:
                 Intent intentChallenges = new Intent(this, ChallengesActivity.class);
                 startActivity(intentChallenges);
+                break;
+
+            case R.id.homepage_logout_button:
+                Intent intentLogut = new Intent(this, LoginActivity.class);
+                startActivity(intentLogut);
                 break;
         }
     }

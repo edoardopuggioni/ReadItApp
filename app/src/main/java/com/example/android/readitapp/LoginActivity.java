@@ -22,9 +22,6 @@ public class LoginActivity extends BaseActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        initToolbar(R.id.toolbar);
-
-
         appManager = AppManager.getInstance();
 
         editTextCardID = (EditText)  findViewById(R.id.editTextCardID);

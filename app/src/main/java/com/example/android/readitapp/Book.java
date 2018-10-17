@@ -8,4 +8,12 @@ public class Book
     private String summary;
     private String cover;
     private Quiz quiz;
+
+    public Book (String title){
+        this.title=title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

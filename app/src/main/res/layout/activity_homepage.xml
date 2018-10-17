@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomepageActivity">
+    tools:context=".HomepageActivity"
+    android:background="@color/colorPrimary">
+
 
     <include layout="@layout/activity_base" />
 
     <android.support.constraint.ConstraintLayout
+
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="167dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="65dp"
+        android:background="@color/colorYellowDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,12 +29,12 @@
             android:id="@+id/homepage_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:text="TextView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,14 +43,15 @@
     </android.support.constraint.ConstraintLayout>
 
     <Button
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/homepage_quiz_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:text="@string/readit_quiz"
         app:layout_constraintBottom_toTopOf="@+id/homepage_achievements_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,14 +60,15 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <Button
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/homepage_achievements_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:text="@string/readit_achievements"
         app:layout_constraintBottom_toTopOf="@+id/homepage_challenges_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,18 +77,40 @@
         app:layout_constraintTop_toBottomOf="@+id/homepage_quiz_button" />
 
     <Button
+        android:background="@color/colorPrimaryDark"
         android:id="@+id/homepage_challenges_button"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:text="@string/readit_challenges"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:onClick="goToActivity"
+        android:text="@string/readit_challenges"
+        app:layout_constraintBottom_toTopOf="@+id/homepage_logout_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homepage_achievements_button" />
+
+    <Button
+        android:id="@+id/homepage_logout_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorRed"
+        android:onClick="goToActivity"
+        android:text="@string/homepage_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_challenges_button" />
+
 </android.support.constraint.ConstraintLayout>

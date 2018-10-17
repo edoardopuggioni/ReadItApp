@@ -12,6 +12,8 @@ public class User
     private ArrayList<Book> borrowedBooks;
     private ArrayList<Book> returnedBooks;
     private ArrayList<ChallengeParticipation> challengesParticipations;
+    int gems;
+
 
     // The following field seems unnecessary. Every user with the same age group would have the
     // same list, so it doesn't make sense to have the list here in the user object. We can
@@ -20,15 +22,16 @@ public class User
     //private ArrayList<Challenge> challenges; // Available challenges for this age group.
 
 
-    public User( Integer cardNumber, String passwordHash, String firstName, AgeGroupsEnum ageGroup, Achievements achievements )
+    public User( Integer cardNumber, String passwordHash, String firstName, AgeGroupsEnum ageGroup, Achievements achievements, int gems , ArrayList<Book> borrowedBooks)
     {
         this.cardNumber = cardNumber;
         this.passwordHash = passwordHash;
         this.firstName = firstName;
         this.ageGroup = ageGroup;
         this.achievements = achievements;
+        this.gems=gems;
 
-        borrowedBooks = new ArrayList<>();
+        this.borrowedBooks = borrowedBooks;
         returnedBooks = new ArrayList<>();
         challengesParticipations = new ArrayList<>();
     }
@@ -51,5 +54,9 @@ public class User
     public AgeGroupsEnum getAgeGroup()
     {
         return ageGroup;
+    }
+
+    public ArrayList<Book> getBorrowedBooks() {
+        return borrowedBooks;
     }
 }

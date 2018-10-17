@@ -5,6 +5,7 @@ package com.example.android.readitapp;
 // Database singleton.
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class FakeData
 {
@@ -27,6 +28,9 @@ public class FakeData
         Achievements achievements;
         User user;
         ChallengeParticipation challengeParticipation;
+        int gems;
+        ArrayList<Book> borrowedBooks;
+
 
 
 
@@ -35,19 +39,22 @@ public class FakeData
         pswHash = appManager.md5("p1");
         achievements = new Achievements();
         challengeParticipation = new ChallengeParticipation();
-        user = new User( 1, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS, achievements );
+        borrowedBooks = new ArrayList<Book>(Collections.singleton(new Book("Harry Potter1")));
+        user = new User( 1, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS, achievements, 50, borrowedBooks );
         users.add(user);
 
         pswHash = appManager.md5("p2");
         achievements = new Achievements();
         challengeParticipation = new ChallengeParticipation();
-        user = new User( 2, pswHash, "Alessandro", AgeGroupsEnum.TIGERS, achievements );
+        borrowedBooks = new ArrayList<Book>(Collections.singleton(new Book("Harry Potter2")));
+        user = new User( 2, pswHash, "Alessandro", AgeGroupsEnum.TIGERS, achievements, 173, borrowedBooks );
         users.add(user);
 
         pswHash = appManager.md5("p3");
         achievements = new Achievements();
         challengeParticipation = new ChallengeParticipation();
-        user = new User( 3, pswHash, "Alessandro", AgeGroupsEnum.BUNNIES, achievements );
+        borrowedBooks = new ArrayList<Book>(Collections.singleton(new Book("Harry Potter3")));
+        user = new User( 3, pswHash, "Andreas", AgeGroupsEnum.BUNNIES, achievements, 4, borrowedBooks);
         users.add(user);
 
 
