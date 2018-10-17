@@ -20,7 +20,7 @@ public class HomepageActivity extends AppCompatActivity
         switch (view.getId())
         {
             case R.id.homepage_quiz_button:
-                Intent intent = new Intent(this, LoginActivity.class);
+                Intent intent = new Intent(this, ChallengesActivity.class);
                 startActivity(intent);
                 break;
 

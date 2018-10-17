@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity
         getSupportActionBar().hide();
 
         appManager = AppManager.getInstance();
-
     }
 
     private Boolean validateFields ( String cardNumberString, String password )
@@ -68,28 +67,35 @@ public class LoginActivity extends AppCompatActivity
         String password;
         Integer cardNumber;
         String passwordHash;
+        Intent intent;
 
-        cardNumberString = editTextCardID.getText().toString();
-        password = editTextPassword.getText().toString();
+        intent = new Intent(this, HomepageActivity.class);
+        startActivity(intent);
+        return;
 
-        if( !validateFields( cardNumberString, password ) )
-            return;
-
-        cardNumber = Integer.parseInt(cardNumberString);
-        passwordHash = appManager.md5(password);
-
-        if( appManager.loginUser( cardNumber, passwordHash ) )
-        {
-            // Here we pass to the Homepage activity. In the Homepage we can retrieve the logged
-            // user through the app manager, which has a field for this purpose. Furthermore,
-            // every time we open a new activity we have to check if the user actually logged in,
-            // and if not we have to start the LoginActivity.
-        }
-        else
-        {
-            // Login failed. We have to display some kind of message below the fields that says
-            // something like "Wrong Card Number or Password". We have to do this without passing
-            // to another activity.
-        }
+//        cardNumberString = editTextCardID.getText().toString();
+//        password = editTextPassword.getText().toString();
+//
+//        if( !validateFields( cardNumberString, password ) )
+//            return;
+//
+//        cardNumber = Integer.parseInt(cardNumberString);
+//        passwordHash = appManager.md5(password);
+//
+//        if( appManager.loginUser( cardNumber, passwordHash ) )
+//        {
+//            // Here we pass to the Homepage activity. In the Homepage we can retrieve the logged
+//            // user through the app manager, which has a field for this purpose. Furthermore,
+//            // every time we open a new activity we have to check if the user actually logged in,
+//            // and if not we have to start the LoginActivity.
+//            intent = new Intent(this, HomepageActivity.class);
+//            startActivity(intent);
+//        }
+//        else
+//        {
+//            // Login failed. We have to display some kind of message below the fields that says
+//            // something like "Wrong Card Number or Password". We have to do this without passing
+//            // to another activity.
+//        }
     }
 }

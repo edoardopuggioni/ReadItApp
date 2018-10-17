@@ -25,8 +25,9 @@ public class AppManager
     public Boolean loginUser( Integer cardNumber, String passwordHash )
     {
         Database db = Database.getInstance();
+        User user;
 
-        User user = db.getUserByCardAndPassword( cardNumber, passwordHash );
+        user = db.getUserByCardAndPassword( cardNumber, passwordHash );
         if( user != null )
         {
             currentUser = user;
