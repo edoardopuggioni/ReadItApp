@@ -6,14 +6,25 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class HomepageActivity extends BaseActivity
 {
+    TextView welcomeMessagge;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+
+        AppManager appManager = AppManager.getInstance();
+        User currentUser = appManager.getCurrentUser();
+
+        welcomeMessagge = findViewById(R.id.homepage_welcome);
+        welcomeMessagge.setText("Welcome " + currentUser.getFirstName() + "!");
         initToolbar(R.id.toolbar);
     }
 
