@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity
+public class LoginActivity extends BaseActivity
 {
     private AppManager appManager;
     private EditText editTextCardID = null;
@@ -22,10 +22,8 @@ public class LoginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        //getSupportActionBar().hide();
+        initToolbar(R.id.toolbar);
+
 
         appManager = AppManager.getInstance();
 
@@ -33,12 +31,6 @@ public class LoginActivity extends AppCompatActivity
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menufile, menu);
-        return true;
-    }
 
     private Boolean validateFields ( String cardNumberString, String password )
     {
