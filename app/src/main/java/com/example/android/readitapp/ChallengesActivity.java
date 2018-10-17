@@ -20,15 +20,8 @@ public class ChallengesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenges);
-
-
-        ArrayAdapter cheeseAdapter =
-                new ArrayAdapter<String>(
-                        this,
-                        R.layout.activity_challenges,
-                        R.id.cheese_name,
-                        cheeses
-                );
+        // creating ArrayAdapter to display the data
+        ArrayAdapter cheeseAdapter = new ArrayAdapter<String>(this, R.layout.activity_challenges, R.id.cheese_name, cheeses);
 
         ListView cheeseList = new ListView(this);
         setContentView(cheeseList);

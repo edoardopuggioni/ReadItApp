@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class FakeData
 {
     ArrayList<User> users;
-    AppManager appManager = AppManager.getInstance();
+    ArrayList<Challenge> challanges;
 
     private static final FakeData ourInstance = new FakeData();
 
@@ -18,28 +18,42 @@ public class FakeData
         return ourInstance;
     }
 
+
     private FakeData()
     {
         // Here we create all the hardcoded data.
+        AppManager appManager = AppManager.getInstance();
         String pswHash;
         Achievements achievements;
         User user;
+        ChallengeParticipation challengeParticipation;
+
+
 
         users = new ArrayList<>();
 
         pswHash = appManager.md5("p1");
         achievements = new Achievements();
+        challengeParticipation = new ChallengeParticipation();
         user = new User( 1, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS, achievements );
         users.add(user);
 
         pswHash = appManager.md5("p2");
         achievements = new Achievements();
+        challengeParticipation = new ChallengeParticipation();
         user = new User( 2, pswHash, "Alessandro", AgeGroupsEnum.TIGERS, achievements );
         users.add(user);
 
         pswHash = appManager.md5("p3");
         achievements = new Achievements();
+        challengeParticipation = new ChallengeParticipation();
         user = new User( 3, pswHash, "Alessandro", AgeGroupsEnum.BUNNIES, achievements );
         users.add(user);
+
+
+
+
     }
+
+
 }

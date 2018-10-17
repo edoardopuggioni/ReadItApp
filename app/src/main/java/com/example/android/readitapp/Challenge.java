@@ -11,6 +11,4 @@ public class Challenge
     private Date endDate;
     private ArrayList<Book> books;
     private String challengeInfo;
-
-
 }
