@@ -27,19 +27,19 @@ public class FakeData
 
         users = new ArrayList<>();
 
-        pswHash = appManager.md5("password1");
+        pswHash = appManager.md5("p1");
         achievements = new Achievements();
-        user = new User( 00001, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS, achievements );
+        user = new User( 1, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS, achievements );
         users.add(user);
 
-        pswHash = appManager.md5("password2");
+        pswHash = appManager.md5("p2");
         achievements = new Achievements();
-        user = new User( 00002, pswHash, "Alessandro", AgeGroupsEnum.TIGERS, achievements );
+        user = new User( 2, pswHash, "Alessandro", AgeGroupsEnum.TIGERS, achievements );
         users.add(user);
 
-        pswHash = appManager.md5("password3");
+        pswHash = appManager.md5("p3");
         achievements = new Achievements();
-        user = new User( 00003, pswHash, "Alessandro", AgeGroupsEnum.BUNNIES, achievements );
+        user = new User( 3, pswHash, "Alessandro", AgeGroupsEnum.BUNNIES, achievements );
         users.add(user);
     }
 }
