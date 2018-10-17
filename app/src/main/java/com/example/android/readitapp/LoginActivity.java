@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        //getSupportActionBar().hide();
+        getSupportActionBar().hide();
 
         appManager = AppManager.getInstance();
 
