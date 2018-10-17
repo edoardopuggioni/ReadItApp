@@ -26,6 +26,9 @@ public class LoginActivity extends AppCompatActivity
         getSupportActionBar().hide();
 
         appManager = AppManager.getInstance();
+
+        editTextCardID = (EditText)  findViewById(R.id.editTextCardID);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
     }
 
     private Boolean validateFields ( String cardNumberString, String password )
