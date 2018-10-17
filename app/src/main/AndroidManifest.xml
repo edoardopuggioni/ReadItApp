@@ -16,11 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AchievementsActivity" />
-        <activity android:name=".ChallengesActivity" />
-        <activity android:name=".HomepageActivity" />
-        <activity android:name=".AchievementsActivity" />
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".AchievementsActivity"
+            android:parentActivityName="com.example.android.readitapp.LoginActivity"/>
+        <activity android:name=".ChallengesActivity"
+            android:parentActivityName="com.example.android.readitapp.LoginActivity"/>
+        <activity android:name=".HomepageActivity"
+            android:parentActivityName="com.example.android.readitapp.LoginActivity"/>
+
     </application>
 
 </manifest>

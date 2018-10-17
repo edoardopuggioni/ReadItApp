@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".HomepageActivity">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/activity_base" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout2"
