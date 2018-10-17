@@ -6,4 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".HomepageActivity">
 
+    <Button
+        android:id="@+id/homepage_quiz_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/readit_quiz"
+        app:layout_constraintBottom_toTopOf="@+id/homepage_achievements_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homepage_achievements_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/readit_achievements"
+        app:layout_constraintBottom_toTopOf="@+id/homepage_challenges_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_quiz_button" />
+
+    <Button
+        android:id="@+id/homepage_challenges_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/readit_challenges"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_achievements_button" />
 </android.support.constraint.ConstraintLayout>
