@@ -22,7 +22,9 @@ public class User
     //private ArrayList<Challenge> challenges; // Available challenges for this age group.
 
 
-    public User( Integer cardNumber, String passwordHash, String firstName, AgeGroupsEnum ageGroup, Achievements achievements, int gems , ArrayList<Book> borrowedBooks, ArrayList<ChallengeParticipation> challengesParticipations)
+    public User( Integer cardNumber, String passwordHash, String firstName, AgeGroupsEnum ageGroup,
+                 Achievements achievements, int gems , ArrayList<Book> borrowedBooks,
+                 ArrayList<Book> returnedBooks, ArrayList<ChallengeParticipation> challengesParticipations )
     {
         this.cardNumber = cardNumber;
         this.passwordHash = passwordHash;
@@ -31,7 +33,8 @@ public class User
         this.achievements = achievements;
         this.gems=gems;
         this.borrowedBooks = borrowedBooks;
-        this.challengesParticipations = new ArrayList<>();
+        this.returnedBooks = returnedBooks;
+        this.challengesParticipations = challengesParticipations;
         returnedBooks = new ArrayList<>();
 
     }
@@ -58,6 +61,11 @@ public class User
 
     public ArrayList<Book> getBorrowedBooks() {
         return borrowedBooks;
+    }
+
+    public ArrayList<Book> getReturnedBooks()
+    {
+        return returnedBooks;
     }
 
     public ArrayList<ChallengeParticipation> getChallengesParticipations() { return challengesParticipations; }
