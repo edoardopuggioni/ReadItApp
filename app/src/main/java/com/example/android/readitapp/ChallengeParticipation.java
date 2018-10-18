@@ -5,6 +5,7 @@ public class ChallengeParticipation
     private Challenge challenge;
     private Integer gems;
 
+
     public ChallengeParticipation() {}
 
     public ChallengeParticipation(Challenge challenge, Integer gems) {
@@ -12,5 +13,11 @@ public class ChallengeParticipation
         this.gems = gems;
     }
 
+    public Challenge getChallenge() {
+        return challenge;
+    }
 
+    public Integer getGems() {
+        return gems;
+    }
 }

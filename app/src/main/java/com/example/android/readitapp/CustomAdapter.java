@@ -9,32 +9,32 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class CustomAdapter extends ArrayAdapter<ChallengeParticipation> {
+public class CustomAdapter extends ArrayAdapter {
 
-    private Context mContext;
-    private List<ChallengeParticipation> ChallengesParticipaationList= new ArrayList<>();
+    //private Context mContext;
+    private ArrayList<ChallengeParticipation> challengeParticipations;
+    private LayoutInflater thisInflater;
+
+
     private AppManager appManager;
 
-    public CustomAdapter(Context context, ArrayList<ChallengeParticipation> list) {
-        super(context, 0, list );
-        mContext = context;
-        ChallengesParticipaationList = list;
+
+    public CustomAdapter(Context context, ArrayList<ChallengeParticipation> challengeParticipations) {
+        super(context, 0, challengeParticipations );
     }
     // Check if an existing view is being reused, otherwise inflate the view
+    @Override
     public View getView (int position, View convertView, ViewGroup parent) {
 
-        View listItem = convertView;
-        if(listItem == null)
-            listItem = LayoutInflater.from(mContext).inflate(R.layout.activity_challenges_in_custom_item,parent,false);
+        ChallengeParticipation part = (ChallengeParticipation) getItem(position);
 
-        appManager = AppManager.getInstance();
-
+        if (convertView == null)
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_challenges_in_custom_item, parent, false);
 
         //filing the data into activity's ListView
         TextView list_item_challenge_item = (TextView) convertView.findViewById(R.id.challenge_title);
-        list_item_challenge_item.setText("test text");
+        list_item_challenge_item.setText(part.getGems());
         Log.d("debug1", "entering");
 
 
