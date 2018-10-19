@@ -36,6 +36,11 @@ public class AppManager
         return quizStatus;
     }
 
+    public void setQuizStatus(QuizStatus quizStatus)
+    {
+        this.quizStatus = quizStatus;
+    }
+
     // If the login process is successful, return true.
     public Boolean loginUser( Integer cardNumber, String passwordHash )
     {

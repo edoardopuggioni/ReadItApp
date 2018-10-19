@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class ChallengesInDetailActivity extends BaseActivity {
 
-   int ChallengeNumber;
+    int challengeNumber;
     private AppManager appManager;
 
     @Override
@@ -18,7 +18,7 @@ public class ChallengesInDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_challenges_in_detail);
         initToolbar(R.id.toolbar);
         Intent CaughtIntent = getIntent();
-        ChallengeNumber = Integer.parseInt(CaughtIntent.getStringExtra(AlarmClock.EXTRA_MESSAGE)) -1;
+        challengeNumber = Integer.parseInt(CaughtIntent.getStringExtra(AlarmClock.EXTRA_MESSAGE)) -1;
 
 
         appManager = AppManager.getInstance();
@@ -30,8 +30,8 @@ public class ChallengesInDetailActivity extends BaseActivity {
         Button challengeRelatedBooksButton =   findViewById(R.id.related_books_button);
 
         //fill TextViews with data
-        challengeNameContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getTitle());
-        challengeCoverContainer.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getChallengeCover());
+        challengeNameContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getTitle());
+        challengeCoverContainer.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getChallengeCover());
         //challengeDescriptionContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getChallengeInfo());
         //challengeEndContainer.setText((CharSequence) appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getEndDate());
         //challengeRelatedBooksButton.setText("" + sbm.getBook(Integer.parseInt(BookNumber)).getPrice());

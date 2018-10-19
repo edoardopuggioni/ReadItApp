@@ -26,7 +26,8 @@
             android:name=".HomepageActivity"
             android:parentActivityName=".LoginActivity" />
         <activity android:name=".AvailableQuizzesActivity" />
-        <activity android:name=".ChallengesInDetailActivity"></activity>
+        <activity android:name=".ChallengesInDetailActivity" />
+        <activity android:name=".QuizStartActivity"></activity>
     </application>
 
 </manifest>

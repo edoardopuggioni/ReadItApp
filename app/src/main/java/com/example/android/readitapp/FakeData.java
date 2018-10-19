@@ -46,8 +46,28 @@ public class FakeData
         Book book;
         Challenge challenge;
         ArrayList<Book> challengeBooks;
+        String question;
+        String[] answers;
+        int correctAnswer;
+        MultipleChoice multipleChoice;
+        ArrayList<Question> questions;
+        Quiz quiz;
 
-        // Init books.
+
+        // Init quiz for a book and then init the corresponding book.
+
+        question = "What are the names of the Weasley twins?";
+        answers = new String[]{
+                "Neville and Fred",
+                "Fred and George",
+                "Harry and Ron",
+                "None of the above"
+        };
+        correctAnswer = 2;
+        multipleChoice = new MultipleChoice( question, answers, correctAnswer-1 );
+        questions = new ArrayList<>();
+        questions.add(multipleChoice);
+        quiz = new Quiz(questions);
 
         book = new Book("9780747532720", "Harry Potter and the Philosopher's Stone",
                 AgeGroupsEnum.DRAGONS,
@@ -66,6 +86,7 @@ public class FakeData
                         "time, the fabled Philosopher's Stone! All this and muggles too. Now, " +
                         "what are they?",
                 R.drawable.harry_potter_1_bc);
+        book.setQuiz(quiz);
         books.add(book);
 
         book = new Book("978074232743", "Harry Potter and the Chamber of Secrets",
@@ -113,6 +134,7 @@ public class FakeData
         books.add(book);
 
 
+
         // Init challenges
 
         // Create an array list of books for specific challenge.
@@ -120,14 +142,19 @@ public class FakeData
 
         challenge = new Challenge("Harry Potter Challenge", AgeGroupsEnum.DRAGONS,
                 new Date(2018, 10, 20), new Date(2018, 12, 15),
-                books, "Info is missing", R.drawable.hp_challenge_cover);
+                challengeBooks, "Info is missing",
+                R.drawable.hp_challenge_cover);
         challenges.add(challenge);
+
+        // Create an array list of books for specific challenge.
+        challengeBooks = new ArrayList<>(books);
 
         challenge = new Challenge("Grimm's fairy tales", AgeGroupsEnum.BUNNIES,
                 new Date(2017,10,1), new Date (2018,1,29),
-                books,"No info yet", R.drawable.default_picture);
-
+                challengeBooks,"No info yet",
+                R.drawable.default_picture);
         challenges.add(challenge);
+
 
         // Init users list.
         users = new ArrayList<>();
