@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends ArrayAdapter
+public class CustomArrayAdapterChallengesIn extends ArrayAdapter
 {
     private ArrayList<ChallengeParticipation> challengeParticipations;
     private LayoutInflater thisInflater;
@@ -19,7 +19,7 @@ public class CustomAdapter extends ArrayAdapter
     private AppManager appManager;
 
 
-    public CustomAdapter(Context context, ArrayList<ChallengeParticipation> challengeParticipations)
+    public CustomArrayAdapterChallengesIn(Context context, ArrayList<ChallengeParticipation> challengeParticipations)
     {
         super(context, 0, challengeParticipations );
     }
