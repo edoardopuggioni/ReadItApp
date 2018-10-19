@@ -65,8 +65,6 @@ public class FakeData
                         "out to kill him, and how he uncovers the most amazing secret of all " +
                         "time, the fabled Philosopher's Stone! All this and muggles too. Now, " +
                         "what are they?",
-                R.drawable.dragon);
-                "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in a 'car crash'. He is bullied by them and his fat, spoilt cousin Dudley, and lives a very unremarkable life with only the odd hiccup (like his hair growing back overnight!) to cause him much to think about. That is until an owl turns up with a letter addressed to Harry and all hell breaks loose! He is literally rescued by a world where nothing is as it seems and magic lessons are the order of the day. Read and find out how Harry discovers his true heritage at Hogwarts School of Wizardry and Witchcraft, the reason behind his parents mysterious death, who is out to kill him, and how he uncovers the most amazing secret of all time, the fabled Philosopher's Stone! All this and muggles too. Now, what are they?",
                 R.drawable.harry_potter_1_bc);
         books.add(book);
 
@@ -74,29 +72,14 @@ public class FakeData
                 AgeGroupsEnum.DRAGONS,
                 "Harry Potter’s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft And Wizardry for his second year, Harry hears strange whispers echo through empty corridors – and then the attacks start. Students are found as though turned to stone … Dobby’s sinister predictions seem to be coming true. ",
                 R.drawable.harry_potter_2_bc);
-                "Harry Potter’s summer has included the worst birthday ever, doomy " +
-                        "warnings from a house-elf called Dobby, and rescue from the Dursleys " +
-                        "by his friend Ron Weasley in a magical flying car! Back at Hogwarts " +
-                        "School of Witchcraft And Wizardry for his second year, Harry hears " +
-                        "strange whispers echo through empty corridors – and then the attacks " +
-                        "start. Students are found as though turned to stone … Dobby’s sinister " +
-                        "predictions seem to be coming true. ",
-                R.drawable.dragon);
+
         books.add(book);
 
         book = new Book("954074232743","Harry Potter and the Prisoner of Azkaban",
                 AgeGroupsEnum.DRAGONS,
                 "When the Knight Bus crashes through the darkness and screeches to a halt in front of him, it’s the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run – and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry’s tea leaves … But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss",
                 R.drawable.harry_potter_3_bc);
-                "When the Knight Bus crashes through the darkness and screeches to a " +
-                        "halt in front of him, it’s the start of another far from ordinary " +
-                        "year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer " +
-                        "and follower of Lord Voldemort, is on the run – and they say he is " +
-                        "coming after Harry. In his first ever Divination class, Professor " +
-                        "Trelawney sees an omen of death in Harry’s tea leaves … But perhaps " +
-                        "most terrifying of all are the Dementors patrolling the school " +
-                        "grounds, with their soul-sucking kiss",
-                R.drawable.dragon);
+
         books.add(book);
 
         book = new Book("444444444444","Book 4",
@@ -143,7 +126,7 @@ public class FakeData
         challenge = new Challenge("Grimm's fairy tales", AgeGroupsEnum.BUNNIES,
                 new Date(2017,10,1), new Date (2018,1,29),
                 books,"No info yet", R.drawable.default_picture);
-                challengeBooks, "Info is missing");
+
         challenges.add(challenge);
 
         // Init users list.
@@ -169,11 +152,10 @@ public class FakeData
         returnedBooks = new ArrayList<>();
         returnedBooks.add(books.get(1));
 
-        challengeParticipations = new ArrayList<>();
-        challengeParticipations.add(new ChallengeParticipation(challenges.get(0),500));
-        challengeParticipations.add(new ChallengeParticipation(challenges.get(1),200));
         challengesParticipations = new ArrayList<>();
-        challengesParticipations.add(new ChallengeParticipation(challenges.get(0),100));
+        challengesParticipations.add(new ChallengeParticipation(challenges.get(0),500));
+        challengesParticipations.add(new ChallengeParticipation(challenges.get(1),200));
+
 
         user = new User(1, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS,
                 achievements, 50, borrowedBooks, returnedBooks, challengesParticipations);
