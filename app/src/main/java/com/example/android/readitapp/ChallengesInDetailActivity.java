@@ -31,8 +31,7 @@ public class ChallengesInDetailActivity extends BaseActivity {
 
         //fill TextViews with data
         challengeNameContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getTitle());
-
-       // challengeCoverContainer.getDrawable();
+        challengeCoverContainer.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getChallengeCover());
         //challengeDescriptionContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getChallengeInfo());
         //challengeEndContainer.setText((CharSequence) appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getEndDate());
         //challengeRelatedBooksButton.setText("" + sbm.getBook(Integer.parseInt(BookNumber)).getPrice());
