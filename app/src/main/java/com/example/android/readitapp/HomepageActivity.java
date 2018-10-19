@@ -1,7 +1,9 @@
 package com.example.android.readitapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -58,7 +60,13 @@ public class HomepageActivity extends BaseActivity
                 break;
 
             case R.id.homepage_logout_button:
+
                 appManager.logout();
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putInt("logged_user", -1);
+                editor.apply();
+
                 nextActivity = new Intent(this, LoginActivity.class);
                 startActivity(nextActivity);
                 break;
