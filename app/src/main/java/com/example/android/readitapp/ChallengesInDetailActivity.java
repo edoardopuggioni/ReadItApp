@@ -39,16 +39,16 @@ public class ChallengesInDetailActivity extends BaseActivity {
         Button challengeRelatedBooksButton =   findViewById(R.id.related_books_button);
 
         //fill TextViews with data
-        challengeNameContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getTitle());
-        challengeCoverContainer.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getChallengeCover());
-        challengeDescriptionContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getChallengeInfo());
+        challengeNameContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getTitle());
+        challengeCoverContainer.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getChallengeCover());
+        challengeDescriptionContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getChallengeInfo());
 
         // TODO: 19/10/2018 Fix date, not showing properly date from challenge
 
         Date today = Calendar.getInstance().getTime();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        String date = dateFormat.format(appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getStartDate());
-        challengeEndContainer.setText("" + appManager.getCurrentUser().getChallengesParticipations().get(ChallengeNumber).getChallenge().getStartDate());
+        String date = dateFormat.format(appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getStartDate());
+        challengeEndContainer.setText("" + appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getStartDate());
 
         //challengeRelatedBooksButton.setText("" + sbm.getBook(Integer.parseInt(BookNumber)).getPrice());
     }

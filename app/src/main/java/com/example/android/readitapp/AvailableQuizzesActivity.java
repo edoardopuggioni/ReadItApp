@@ -42,7 +42,7 @@ public class AvailableQuizzesActivity extends BaseActivity
             // Here I have to pass the book instead of passing the QuizStatus, because in the
             // QuizStartActivity I want to display a message like "Welcome to the quiz of Harry
             // Potter" with some instructions, so I still need the title of the book.
-            
+
             AppManager appManager = AppManager.getInstance();
             Quiz quiz = appManager.getCurrentUser().getReturnedBooks().get(position).getQuiz();
             QuizStatus quizStatus = new QuizStatus( quiz, 0, 0 );
