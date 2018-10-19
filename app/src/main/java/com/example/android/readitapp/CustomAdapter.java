@@ -26,7 +26,8 @@ public class CustomAdapter extends ArrayAdapter
 
     // Check if an existing view is being reused, otherwise inflate the view
     @Override
-    public View getView (int position, View convertView, ViewGroup parent) {
+    public View getView (int position, View convertView, ViewGroup parent)
+    {
         appManager = AppManager.getInstance();
 
 
