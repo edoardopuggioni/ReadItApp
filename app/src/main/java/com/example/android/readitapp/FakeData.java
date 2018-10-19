@@ -142,15 +142,15 @@ public class FakeData
 
         borrowedBooks = new ArrayList<>();
         borrowedBooks.add(books.get(0)); // HP1
-        borrowedBooks.add(books.get(2)); // HP4
-        borrowedBooks.add(books.get(3)); // Book4
-        borrowedBooks.add(books.get(4)); // Book5
-        borrowedBooks.add(books.get(5)); // Book6
-        borrowedBooks.add(books.get(6)); // Book7
-        borrowedBooks.add(books.get(7)); // Book8
+        borrowedBooks.add(books.get(2)); // HP3
 
         returnedBooks = new ArrayList<>();
         returnedBooks.add(books.get(1));
+        returnedBooks.add(books.get(3)); // Book4
+        returnedBooks.add(books.get(4)); // Book5
+        returnedBooks.add(books.get(5)); // Book6
+        returnedBooks.add(books.get(6)); // Book7
+        returnedBooks.add(books.get(7)); // Book8
 
         challengesParticipations = new ArrayList<>();
         challengesParticipations.add(new ChallengeParticipation(challenges.get(0),500));

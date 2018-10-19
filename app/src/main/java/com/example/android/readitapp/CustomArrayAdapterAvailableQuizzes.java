@@ -29,7 +29,7 @@ public class CustomArrayAdapterAvailableQuizzes extends ArrayAdapter
         // Check if an existing view is being reused, otherwise inflate the view.
         if (convertView == null)
             convertView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.activity_available_quizzes_custom_list_item, parent, false);
+                    R.layout.available_quizzes_custom_list_item, parent, false);
 
         // Lookup view to catch layout elements.
         TextView title = (TextView) convertView.findViewById(R.id.available_quizzes_item_title);

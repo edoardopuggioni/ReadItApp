@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -47,8 +48,9 @@ public class LoginActivity extends BaseActivity
         {
             AppManager appManager = AppManager.getInstance();
             appManager.setCurrentUser(fakeData.users.get(loggedUserIndex));
-            Intent activity = new Intent(this, HomepageActivity.class);
-            startActivity(activity);
+            Intent intent = new Intent(this, HomepageActivity.class);
+            startActivity(intent);
+            ActivityCompat.finishAffinity(LoginActivity.this);
         }
 
         super.onCreate(savedInstanceState);
@@ -133,6 +135,7 @@ public class LoginActivity extends BaseActivity
             // user through the AppManager currentUser.
             intent = new Intent(this, HomepageActivity.class);
             startActivity(intent);
+            ActivityCompat.finishAffinity(LoginActivity.this);
         }
         else
         {
