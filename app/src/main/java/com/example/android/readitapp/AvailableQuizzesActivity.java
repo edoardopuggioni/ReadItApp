@@ -21,5 +21,10 @@ public class AvailableQuizzesActivity extends BaseActivity
         ArrayList<Book> returnedBooks = appManager.getCurrentUser().getReturnedBooks();
 
         listView = (ListView) findViewById(R.id.available_quizzes_list_view);
+
+        CustomArrayAdapterAvailableQuizzes arrayAdapter = new CustomArrayAdapterAvailableQuizzes(
+                getApplicationContext(), returnedBooks );
+
+        listView.setAdapter(arrayAdapter);
     }
 }

@@ -3,6 +3,7 @@ package com.example.android.readitapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,17 +20,17 @@ public class HomepageActivity extends BaseActivity
 
         initToolbar(R.id.toolbar);
 
+        ListView listView;
         AppManager appManager = AppManager.getInstance();
-        User currentUser = appManager.getCurrentUser();
 
-        welcomeMessage = findViewById(R.id.homepage_welcome);
-        ArrayList<Book> borrowedBooks = currentUser.getBorrowedBooks();
+        ArrayList<Book> borrowedBooks = appManager.getCurrentUser().getBorrowedBooks();
 
-        String borrowedBooksString = "";
-        for(Book i: borrowedBooks)
-            borrowedBooksString += i.getTitle() + "\n";
+        listView = (ListView) findViewById(R.id.borrowed_books_list_view);
 
-        welcomeMessage.setText("Welcome " + currentUser.getFirstName() + "!\nYour current books are:\n"+borrowedBooksString );
+        CustomArrayAdapterBorrowedBooks arrayAdapter = new CustomArrayAdapterBorrowedBooks(
+                getApplicationContext(), borrowedBooks );
+
+        listView.setAdapter(arrayAdapter);
     }
 
     public void goToActivity(View view)
