@@ -1,14 +1,18 @@
 package com.example.android.readitapp;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 public class LoginActivity extends BaseActivity
 {
@@ -19,6 +23,34 @@ public class LoginActivity extends BaseActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        FakeData fakeData = FakeData.getInstance();
+
+        // First I check the SharedPreferences, a kind of offline local memory in the phone memory.
+        // If there is already something, I have to load instead of create new.
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        Gson gson = new Gson();
+        String json = prefs.getString("users_list", null);
+        Type type = new TypeToken<ArrayList<User>>() {}.getType();
+        ArrayList<User> users = (ArrayList<User>) gson.fromJson(json, type);
+
+        // REMEMBER every time we change some data in some user, we have to update the saved user
+        // list in the prefs.
+        if( users != null )
+            fakeData.users = users;
+
+        // REMEMBER
+        // Every time we login a user, we have to update the index of the logged user in the prefs.
+        // Every time we logout a user, we have to change the index in the prefs to -1.
+        int loggedUserIndex = prefs.getInt("logged_user", -1 );
+        if( loggedUserIndex != -1 )
+        {
+            AppManager appManager = AppManager.getInstance();
+            appManager.setCurrentUser(fakeData.users.get(loggedUserIndex));
+            Intent activity = new Intent(this, HomepageActivity.class);
+            startActivity(activity);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -27,7 +59,6 @@ public class LoginActivity extends BaseActivity
         editTextCardID = (EditText)  findViewById(R.id.editTextCardID);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
     }
-
 
     private Boolean validateFields ( String cardNumberString, String password )
     {
@@ -85,10 +116,21 @@ public class LoginActivity extends BaseActivity
 
         if( appManager.loginUser( cardNumber, passwordHash ) )
         {
-            // Here we pass to the Homepage activity. In the Homepage we can retrieve the logged
-            // user through the app manager, which has a field for this purpose. Furthermore,
-            // every time we open a new activity we have to check if the user actually logged in,
-            // and if not we have to start the LoginActivity.
+            // Now we have to update the loggedUserIndex in the SharedPreferences.
+
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = prefs.edit();
+
+            AppManager appManager = AppManager.getInstance();
+            FakeData fakeData = FakeData.getInstance();
+            int loggedUserIndex = fakeData.users.indexOf(appManager.getCurrentUser());
+
+            editor.putInt("logged_user", loggedUserIndex);
+            editor.apply();
+
+
+            // Now we pass to the Homepage activity. In the Homepage we can retrieve the logged
+            // user through the AppManager currentUser.
             intent = new Intent(this, HomepageActivity.class);
             startActivity(intent);
         }

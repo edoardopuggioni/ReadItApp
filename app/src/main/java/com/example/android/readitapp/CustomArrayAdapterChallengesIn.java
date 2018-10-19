@@ -29,6 +29,9 @@ public class CustomArrayAdapterChallengesIn extends ArrayAdapter
 
         appManager = AppManager.getInstance();
 
+
+        //challengeParticipation challengeParticipation = (ChallengeParticipation) getItem(position);
+
         if (convertView == null)
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_challenges_in_custom_item,
                     parent, false);

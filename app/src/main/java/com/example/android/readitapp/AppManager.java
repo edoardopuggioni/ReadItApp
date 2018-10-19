@@ -26,6 +26,11 @@ public class AppManager
         return currentUser;
     }
 
+    public void setCurrentUser(User currentUser)
+    {
+        this.currentUser = currentUser;
+    }
+
     public QuizStatus getQuizStatus()
     {
         return quizStatus;
