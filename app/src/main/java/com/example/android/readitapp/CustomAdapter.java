@@ -27,17 +27,23 @@ public class CustomAdapter extends ArrayAdapter
     // Check if an existing view is being reused, otherwise inflate the view
     @Override
     public View getView (int position, View convertView, ViewGroup parent) {
+        appManager = AppManager.getInstance();
 
-        ChallengeParticipation challengeParticipation = (ChallengeParticipation) getItem(position);
+
+        //challengeParticipation challengeParticipation = (ChallengeParticipation) getItem(position);
 
         if (convertView == null)
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_challenges_in_custom_item,
                     parent, false);
 
-        //filing the data into activity's ListView
-        TextView list_item_challenge_item = (TextView) convertView.findViewById(R.id.challenge_title);
-        list_item_challenge_item.setText(challengeParticipation.getGems());
-        Log.d("debug1", "entering");
+        //handlers to the elements in activity .xml
+        TextView list_item_challenge_title = (TextView) convertView.findViewById(R.id.challenge_title);
+        TextView list_item_challenge_days_to_end_ = (TextView) convertView.findViewById(R.id.challenge_days_to_end);
+
+        list_item_challenge_title.setText(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getTitle());
+        list_item_challenge_days_to_end_.setText("" +appManager.getCurrentUser().getChallengesParticipations().get(0).getGems());
+
+        Log.d("MyTag", "" + appManager.getCurrentUser().getChallengesParticipations().size());
 
         return convertView;
     }

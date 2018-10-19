@@ -6,10 +6,10 @@ public class Book
     private String title;
     private AgeGroupsEnum ageGroup;
     private String summary;
-    private String cover;
+    private int cover;
     private Quiz quiz;
 
-    public Book( String isbn, String title, AgeGroupsEnum ageGroup, String summary, String cover )
+    public Book( String isbn, String title, AgeGroupsEnum ageGroup, String summary, int cover )
     {
         this.isbn = isbn;
         this.title = title;

@@ -5,7 +5,6 @@ package com.example.android.readitapp;
 // Database singleton.
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 
 public class FakeData
@@ -33,7 +32,7 @@ public class FakeData
         String pswHash;
         Achievements achievements;
         User user;
-        ChallengeParticipation challengeParticipation;
+        //ChallengeParticipation challengeParticipation;
         ArrayList<Book> books;
         int gems;
 
@@ -45,18 +44,25 @@ public class FakeData
 
 
         // initializing books
-        book = new Book("9780747532743",
+        book = new Book("9780747532720",
                 "Harry Potter and the Philosopher's Stone",
                 AgeGroupsEnum.DRAGONS,
                 "Harry Potter is an ordinary boy who lives in a cupboard under the stairs at his Aunt Petunia and Uncle Vernon's house, which he thinks is normal for someone like him who's parents have been killed in a 'car crash'. He is bullied by them and his fat, spoilt cousin Dudley, and lives a very unremarkable life with only the odd hiccup (like his hair growing back overnight!) to cause him much to think about. That is until an owl turns up with a letter addressed to Harry and all hell breaks loose! He is literally rescued by a world where nothing is as it seems and magic lessons are the order of the day. Read and find out how Harry discovers his true heritage at Hogwarts School of Wizardry and Witchcraft, the reason behind his parents mysterious death, who is out to kill him, and how he uncovers the most amazing secret of all time, the fabled Philosopher's Stone! All this and muggles too. Now, what are they?",
-                "No image");
+                R.drawable.dragon);
         books.add(book);
 
         book = new Book("978074232743", "Harry Potter and the Chamber of Secrets",
                 AgeGroupsEnum.DRAGONS,
                 "Harry Potter’s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft And Wizardry for his second year, Harry hears strange whispers echo through empty corridors – and then the attacks start. Students are found as though turned to stone … Dobby’s sinister predictions seem to be coming true. ",
-                "No image");
+                R.drawable.dragon);
         books.add(book);
+
+        book = new Book("954074232743","Harry Potter and the Prisoner of Azkaban",
+                AgeGroupsEnum.DRAGONS,
+                "When the Knight Bus crashes through the darkness and screeches to a halt in front of him, it’s the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run – and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry’s tea leaves … But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss",
+                R.drawable.dragon);
+
+
 
 
         // initializing challenges
@@ -75,14 +81,14 @@ public class FakeData
         pswHash = appManager.md5("1");
         achievements = new Achievements();
 
-        challengeParticipation = new ChallengeParticipation(challenges.get(0), 100);
-        challengeParticipations.add(challengeParticipation);
-
         borrowedBooks = new ArrayList<>();
         borrowedBooks.add(books.get(0));
 
         returnedBooks = new ArrayList<>();
         returnedBooks.add(books.get(1));
+
+        challengeParticipations = new ArrayList<>();
+        challengeParticipations.add(new ChallengeParticipation(challenges.get(0),100));
 
         user = new User(1, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS,
                 achievements, 50, borrowedBooks, returnedBooks, challengeParticipations);
@@ -94,8 +100,9 @@ public class FakeData
         pswHash = appManager.md5("p2");
         achievements = new Achievements();
 
-        challengeParticipation = new ChallengeParticipation(challenges.get(0), 100);
-        challengeParticipations.add(challengeParticipation);
+        //We don't have to create this
+        //challengeParticipation = new ChallengeParticipation(challenges.get(0), 200);
+        //challengeParticipations.add(challengeParticipation);
 
         borrowedBooks = new ArrayList<>();
         borrowedBooks.add(books.get(0));

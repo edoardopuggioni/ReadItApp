@@ -7,4 +7,7 @@
     <color name="colorYellowDark">#ffcc66</color>
     <color name="colorBlueDark">#69b9ff</color>
     <color name="colorRed">#e95e2f</color>
+    <color name="colorOrangeBackgrounds">#FFCA28</color>
+
+
 </resources>

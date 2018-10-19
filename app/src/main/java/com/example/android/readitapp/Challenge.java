@@ -22,4 +22,28 @@ public class Challenge
         this.books = books;
         this.challengeInfo = challengeInfo;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public AgeGroupsEnum getAgeGroup() {
+        return ageGroup;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
+    public String getChallengeInfo() {
+        return challengeInfo;
+    }
 }
