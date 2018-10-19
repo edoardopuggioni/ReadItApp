@@ -7,6 +7,7 @@
     tools:context=".ChallengesActivity">
 
 
+
     <include
         android:id="@+id/include"
         layout="@layout/activity_base"
@@ -17,14 +18,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-
+        tools:listheader="Abc"
         android:id="@+id/list_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/placeholder_style_big_boxes"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
         android:padding="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include" />
 

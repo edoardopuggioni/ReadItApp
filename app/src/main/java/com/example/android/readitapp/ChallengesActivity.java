@@ -1,37 +1,53 @@
 package com.example.android.readitapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ChallengesActivity extends BaseActivity {
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
-    private ListView listView;
-    private CustomArrayAdapterChallengesIn challengesAdapter;
-    private AppManager appManager;
-    private String a;
+public class ChallengesActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenges);
 
+        final ListView listViewHandle = (ListView) findViewById(R.id.list_view);
+
         // creating toolbar
         initToolbar(R.id.toolbar);
 
-        appManager = AppManager.getInstance();
+        AppManager appManager = AppManager.getInstance();
 
-        listView = (ListView) findViewById(R.id.list_view);
+        CustomArrayAdapterChallengesIn challengesAdapter = new CustomArrayAdapterChallengesIn(this ,appManager.getCurrentUser().getChallengesParticipations() );
 
-        challengesAdapter = new CustomArrayAdapterChallengesIn(this ,appManager.getCurrentUser().getChallengesParticipations() );
+        //adding header to the ListView
+        LayoutInflater inflater = getLayoutInflater();
+        ViewGroup header = (ViewGroup)inflater.inflate(R.layout.activity_challenges_in_list_header,listViewHandle,false);
+        listViewHandle.addHeaderView(header);
 
-        //Creating header of listView
-        TextView textView = new TextView(getApplicationContext());
-        textView.setText("Challenges you're in");
-        listView.addHeaderView(textView);
+        listViewHandle.setAdapter(challengesAdapter);
 
-        listView.setAdapter(challengesAdapter);
+        listViewHandle.setOnItemClickListener( new CustomOnItemClickListener() );
+    }
 
+    public class CustomOnItemClickListener implements AdapterView.OnItemClickListener
+    {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+        {
+            Intent intent = new Intent(getApplicationContext(), ChallengesInDetailActivity.class );
 
+            //passing the reference to the challenge
+            String message = String.valueOf(position);
+            intent.putExtra( EXTRA_MESSAGE, message );
+            startActivity(intent);
+        }
     }
 }

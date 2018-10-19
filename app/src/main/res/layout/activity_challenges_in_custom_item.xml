@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/placeholder_style_middle_green_boxes">
 
 
@@ -11,24 +11,76 @@
         android:id="@+id/challenge_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/challenge_days_to_end"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Harry Potter challenge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/challenge_days_to_end"
+        android:id="@+id/challenge_days_to_end_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="30"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/you_earned_label"
+        app:layout_constraintStart_toEndOf="@+id/you_earned_label"
+        app:layout_constraintTop_toTopOf="@+id/you_earned_label" />
+
+    <TextView
+        android:id="@+id/days_to_end_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="20"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/days_to_end_label"
+        app:layout_constraintStart_toEndOf="@+id/days_to_end_label"
+        app:layout_constraintTop_toTopOf="@+id/days_to_end_label" />
+
+    <TextView
+        android:id="@+id/days_to_end_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Days to end:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/challenge_title"
+        app:layout_constraintTop_toBottomOf="@+id/challenge_title" />
+
+    <ImageView
+
+        android:id="@+id/imageView_gem"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:contentDescription="gem_image"
+        app:layout_constraintBottom_toBottomOf="@+id/challenge_days_to_end_value"
+        app:layout_constraintStart_toEndOf="@+id/challenge_days_to_end_value"
+        app:layout_constraintTop_toTopOf="@+id/challenge_days_to_end_value"
+        app:srcCompat="@drawable/ic_gem"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/you_earned_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="You earned:"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/challenge_title" />
+        app:layout_constraintStart_toStartOf="@+id/days_to_end_label"
+        app:layout_constraintTop_toBottomOf="@+id/days_to_end_label" />
 
 </android.support.constraint.ConstraintLayout>

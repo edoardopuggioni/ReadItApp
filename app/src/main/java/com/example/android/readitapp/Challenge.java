@@ -13,14 +13,16 @@ public class Challenge
     private Date endDate;
     private ArrayList<Book> books;
     private String challengeInfo;
+    private int challengeCover;
 
-    public Challenge(String title, AgeGroupsEnum ageGroup, Date startDate, Date endDate, ArrayList<Book> books, String challengeInfo) {
+    public Challenge(String title, AgeGroupsEnum ageGroup, Date startDate, Date endDate, ArrayList<Book> books, String challengeInfo, int challengeCover) {
         this.title = title;
         this.ageGroup = ageGroup;
         this.startDate = startDate;
         this.endDate = endDate;
         this.books = books;
         this.challengeInfo = challengeInfo;
+        this.challengeCover = challengeCover;
     }
 
     public String getTitle() {
@@ -46,4 +48,6 @@ public class Challenge
     public String getChallengeInfo() {
         return challengeInfo;
     }
+
+    public int getChallengeCover() { return challengeCover; }
 }
