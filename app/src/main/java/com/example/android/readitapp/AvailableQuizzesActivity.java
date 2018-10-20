@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,9 +29,11 @@ public class AvailableQuizzesActivity extends BaseActivity
         listView = (ListView) findViewById(R.id.available_quizzes_list_view);
 
         CustomArrayAdapterAvailableQuizzes arrayAdapter = new CustomArrayAdapterAvailableQuizzes(
-                getApplicationContext(), returnedBooks );
+                this, returnedBooks );
 
         listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener( new AvailableQuizzesActivity.CustomOnItemClickListener() );
     }
 
     public class CustomOnItemClickListener implements AdapterView.OnItemClickListener
@@ -38,16 +41,13 @@ public class AvailableQuizzesActivity extends BaseActivity
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id)
         {
-            // TODO Read below.
-            // Here I have to pass the book instead of passing the QuizStatus, because in the
-            // QuizStartActivity I want to display a message like "Welcome to the quiz of Harry
-            // Potter" with some instructions, so I still need the title of the book.
+            // TODO Change TestActivity with QuizStartActivity: if I just change it, doesn't work.
+            Intent intent = new Intent(  getApplicationContext(), TestActivity.class );
 
-            AppManager appManager = AppManager.getInstance();
-            Quiz quiz = appManager.getCurrentUser().getReturnedBooks().get(position).getQuiz();
-            QuizStatus quizStatus = new QuizStatus( quiz, 0, 0 );
-            appManager.setQuizStatus(quizStatus);
-            Intent intent = new Intent(getApplicationContext(), QuizStartActivity.class );
+            // Passing the reference to the selected book (the user actually selected a quiz).
+//            String message = String.valueOf(position);
+//            intent.putExtra( EXTRA_MESSAGE, message );
+
             startActivity(intent);
         }
     }

@@ -21,7 +21,8 @@ public class ChallengesInDetailActivity extends BaseActivity {
     private AppManager appManager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenges_in_detail);
         initToolbar(R.id.toolbar);
