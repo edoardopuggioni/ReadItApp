@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -33,6 +34,18 @@ public class HomepageActivity extends BaseActivity
                 getApplicationContext(), borrowedBooks );
 
         listView.setAdapter(arrayAdapter);
+
+
+       // Button button = (Button) findViewById(R.id.homepage_achievements_button);
+       // button.setOnClickListener(new View.OnClickListener() {
+
+       //         public void onClick(View v) {
+       //            Intent achieve = new Intent(HomepageActivity.this, AchievementsActivity.class);
+       //          startActivity(achieve);
+       //
+       //          }
+       //    });
+
     }
 
     public void goToActivity(View view)
