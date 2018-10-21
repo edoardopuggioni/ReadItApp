@@ -9,4 +9,10 @@
     <string name="books_you_are_reading">Books you are reading</string>
     <string name="login">Login</string>
     <string name="applogo">AppLogo</string>
+    <string name="most_recent_badges">Most Recent Badges</string>
+    <string name="dragon_slayer">Dragon Slayer</string>
+    <string name="princes_saved">Princes Saved</string>
+    <string name="cinderella_s_badge">Cinderella\'s Badge</string>
+    <string name="other_badges">Other Badges</string>
+    <string name="readit_score_420">ReadIt Score 420</string>
 </resources>

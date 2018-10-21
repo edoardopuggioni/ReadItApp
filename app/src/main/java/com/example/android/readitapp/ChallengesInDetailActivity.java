@@ -6,7 +6,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.provider.AlarmClock;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,9 +14,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class ChallengesInDetailActivity extends BaseActivity {
 
@@ -26,7 +22,6 @@ public class ChallengesInDetailActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AppManager appManager;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenges_in_detail);
         initToolbar(R.id.toolbar);
@@ -34,6 +29,8 @@ public class ChallengesInDetailActivity extends BaseActivity {
         challengeNumber = Integer.parseInt(CaughtIntent.getStringExtra(AlarmClock.EXTRA_MESSAGE)) -1;
 
         appManager = AppManager.getInstance();
+
+
 
         TextView challengeNameContainer = findViewById(R.id.challenge_name_container);
         ImageView challengeCoverContainer =  findViewById(R.id.challenge_cover_container);
