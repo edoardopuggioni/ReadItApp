@@ -5,6 +5,7 @@ package com.example.android.readitapp;
 // Database singleton.
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 public class FakeData
@@ -138,19 +139,26 @@ public class FakeData
         // Init challenges
 
         // Create an array list of books for specific challenge.
-        challengeBooks = new ArrayList<>(books);
+        challengeBooks = new ArrayList<>();
+        challengeBooks.add(books.get(0));
+        challengeBooks.add(books.get(1));
+        challengeBooks.add(books.get(3));
+        challengeBooks.add(books.get(4));
 
         challenge = new Challenge("Harry Potter Challenge", AgeGroupsEnum.DRAGONS,
-                new Date(2018, 10, 20), new Date(2018, 12, 15),
+                new Date(118, Calendar.OCTOBER, 26), new Date(2018, 12, 15),
                 challengeBooks, "Info is missing",
                 R.drawable.hp_challenge_cover);
         challenges.add(challenge);
 
         // Create an array list of books for specific challenge.
-        challengeBooks = new ArrayList<>(books);
+        challengeBooks = new ArrayList<>();
+        challengeBooks.add(books.get(1));
+        challengeBooks.add(books.get(2));
+        challengeBooks.add(books.get(3));
 
         challenge = new Challenge("Grimm's fairy tales", AgeGroupsEnum.BUNNIES,
-                new Date(2017,10,1), new Date (2018,1,29),
+                new Date(117,10,1), new Date (2018,1,29),
                 challengeBooks,"No info yet",
                 R.drawable.default_picture);
         challenges.add(challenge);
