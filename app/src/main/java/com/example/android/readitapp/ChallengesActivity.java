@@ -14,7 +14,8 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 public class ChallengesActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenges);
 
