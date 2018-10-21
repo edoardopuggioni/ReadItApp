@@ -27,7 +27,7 @@ public class ChallengesInDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_challenges_in_detail);
         initToolbar(R.id.toolbar);
         Intent CaughtIntent = getIntent();
-        challengeNumber = Integer.parseInt(CaughtIntent.getStringExtra(AlarmClock.EXTRA_MESSAGE)) -1;
+        challengeNumber = Integer.parseInt(CaughtIntent.getStringExtra(AlarmClock.EXTRA_MESSAGE))-1;
 
         appManager = AppManager.getInstance();
 

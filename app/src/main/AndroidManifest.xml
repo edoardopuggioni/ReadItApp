@@ -28,7 +28,7 @@
         <activity android:name=".AvailableQuizzesActivity" />
         <activity android:name=".ChallengesInDetailActivity" />
         <activity android:name=".QuizStartActivity" />
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".MultipleChoiceActivity"></activity>
     </application>
 
 </manifest>

@@ -12,4 +12,19 @@ public class QuizStatus
         this.currentQuestion = currentQuestion;
         this.correctAnswers = correctAnswers;
     }
+
+    public Quiz getQuiz()
+    {
+        return quiz;
+    }
+
+    public int getCurrentQuestion()
+    {
+        return currentQuestion;
+    }
+
+    public int getCorrectAnswers()
+    {
+        return correctAnswers;
+    }
 }

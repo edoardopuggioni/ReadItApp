@@ -89,12 +89,27 @@ public class FakeData
         book.setQuiz(quiz);
         books.add(book);
 
+
+        question = "What animal Harry and Ron find in the forest?";
+        answers = new String[]{
+                "Big dog with three heads",
+                "Huge black spider",
+                "White unicorn",
+                "None of the above"
+        };
+        correctAnswer = 2;
+        multipleChoice = new MultipleChoice( question, answers, correctAnswer-1 );
+        questions = new ArrayList<>();
+        questions.add(multipleChoice);
+        quiz = new Quiz(questions);
+
         book = new Book("978074232743", "Harry Potter and the Chamber of Secrets",
                 AgeGroupsEnum.DRAGONS,
                 "Harry Potter’s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft And Wizardry for his second year, Harry hears strange whispers echo through empty corridors – and then the attacks start. Students are found as though turned to stone … Dobby’s sinister predictions seem to be coming true. ",
                 R.drawable.harry_potter_2_bc);
-
+        book.setQuiz(quiz);
         books.add(book);
+
 
         book = new Book("954074232743","Harry Potter and the Prisoner of Azkaban",
                 AgeGroupsEnum.DRAGONS,

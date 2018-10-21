@@ -9,4 +9,7 @@
     <string name="books_you_are_reading">Books you are reading</string>
     <string name="login">Login</string>
     <string name="applogo">AppLogo</string>
+    <string name="welcome_to_the_quiz_about">Welcome to the quiz about</string>
+    <string name="start">Start</string>
+    <string name="next">Next</string>
 </resources>

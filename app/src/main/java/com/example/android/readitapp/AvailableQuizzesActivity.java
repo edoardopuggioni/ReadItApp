@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,12 +40,11 @@ public class AvailableQuizzesActivity extends BaseActivity
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id)
         {
-            // TODO Change TestActivity with QuizStartActivity: if I just change it, doesn't work.
-            Intent intent = new Intent(  getApplicationContext(), TestActivity.class );
+            Intent intent = new Intent(  getApplicationContext(), QuizStartActivity.class );
 
             // Passing the reference to the selected book (the user actually selected a quiz).
-//            String message = String.valueOf(position);
-//            intent.putExtra( EXTRA_MESSAGE, message );
+            String message = String.valueOf(position);
+            intent.putExtra( EXTRA_MESSAGE, message );
 
             startActivity(intent);
         }

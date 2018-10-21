@@ -12,4 +12,19 @@ public class MultipleChoice extends Question
         this.answers = answers;
         this.correctAnswerIndex = correctAnswerIndex;
     }
+
+    public String getQuestion()
+    {
+        return question;
+    }
+
+    public String[] getAnswers()
+    {
+        return answers;
+    }
+
+    public int getCorrectAnswerIndex()
+    {
+        return correctAnswerIndex;
+    }
 }
