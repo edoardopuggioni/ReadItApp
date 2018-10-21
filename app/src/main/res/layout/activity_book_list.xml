@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChallengesActivity">
-
-
+    tools:context=".BookListActivity">
 
     <include
         android:id="@+id/include"
@@ -19,7 +17,7 @@
 
     <ListView
         android:scrollbars="none"
-        android:id="@+id/list_view"
+        android:id="@+id/list_view_for_book"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
@@ -28,15 +26,14 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/placeholder_style_big_boxes"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"
-        android:padding="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        tools:listheader="Abc" />
-
+        app:layout_constraintTop_toBottomOf="@+id/include" />"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
 
 </android.support.constraint.ConstraintLayout>

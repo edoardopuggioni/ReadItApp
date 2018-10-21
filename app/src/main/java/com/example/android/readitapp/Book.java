@@ -2,7 +2,8 @@ package com.example.android.readitapp;
 
 public class Book
 {
-    private String isbn;
+
+
     private String title;
     private AgeGroupsEnum ageGroup;
     private String summary;
@@ -32,4 +33,14 @@ public class Book
     {
         this.quiz = quiz;
     }
+
+    private String isbn;
+
+    public String getIsbn() { return isbn; }
+
+    public AgeGroupsEnum getAgeGroup() { return ageGroup; }
+
+    public String getSummary() { return summary; }
+
+    public int getCover() { return cover; }
 }

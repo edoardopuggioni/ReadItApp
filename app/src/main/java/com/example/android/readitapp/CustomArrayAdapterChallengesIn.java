@@ -22,7 +22,6 @@ public class CustomArrayAdapterChallengesIn extends ArrayAdapter
     {
         super(context, 0, challengeParticipations );
     }
-
     // Check if an existing view is being reused, otherwise inflate the view
     @Override
     public View getView (int position, View convertView, ViewGroup parent) {
@@ -31,7 +30,6 @@ public class CustomArrayAdapterChallengesIn extends ArrayAdapter
 
 
         //challengeParticipation challengeParticipation = (ChallengeParticipation) getItem(position);
-
         if (convertView == null)
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_challenges_in_custom_item,
                     parent, false);
@@ -43,7 +41,6 @@ public class CustomArrayAdapterChallengesIn extends ArrayAdapter
         list_item_challenge_title.setText(appManager.getCurrentUser().getChallengesParticipations().get(position).getChallenge().getTitle());
         list_item_challenge_days_to_end_.setText("" +appManager.getCurrentUser().getChallengesParticipations().get(position).getGems());
 
-        Log.d("MyTag", "" + appManager.getCurrentUser().getChallengesParticipations().size());
 
         return convertView;
     }
