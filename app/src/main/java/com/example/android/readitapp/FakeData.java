@@ -90,6 +90,10 @@ public class FakeData
         books.add(book);
 
 
+        // Init quiz for a book and then init the corresponding book.
+
+        questions = new ArrayList<>();
+
         question = "What animal Harry and Ron find in the forest?";
         answers = new String[]{
                 "Big dog with three heads",
@@ -99,8 +103,19 @@ public class FakeData
         };
         correctAnswer = 2;
         multipleChoice = new MultipleChoice( question, answers, correctAnswer-1 );
-        questions = new ArrayList<>();
         questions.add(multipleChoice);
+
+        question = "How do Harry and Ron reach Howgwarts?";
+        answers = new String[]{
+                "On a flying car",
+                "On a magic train",
+                "Using magic powder",
+                "None of the above"
+        };
+        correctAnswer = 1;
+        multipleChoice = new MultipleChoice( question, answers, correctAnswer-1 );
+        questions.add(multipleChoice);
+
         quiz = new Quiz(questions);
 
         book = new Book("978074232743", "Harry Potter and the Chamber of Secrets",

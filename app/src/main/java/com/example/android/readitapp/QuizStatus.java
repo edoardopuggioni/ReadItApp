@@ -27,4 +27,17 @@ public class QuizStatus
     {
         return correctAnswers;
     }
+
+    public Boolean quizIsFinished()
+    {
+        if( currentQuestion == quiz.getNumberOfQuestions()-1 )
+            return true;
+        else
+            return false;
+    }
+
+    public void setNextQuestion()
+    {
+        currentQuestion++;
+    }
 }

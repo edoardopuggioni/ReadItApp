@@ -14,4 +14,9 @@ public class Quiz
     {
         return questions.get(index);
     }
+
+    int getNumberOfQuestions()
+    {
+        return questions.size();
+    }
 }
