@@ -50,14 +50,7 @@ public class CustomArrayAdapterAvailableQuizzes extends ArrayAdapter
             @Override
             public void onClick(View view)
             {
-//                // Passing the reference to the selected book (the user actually selected a quiz).
-//                Intent intent = new Intent( getContext(), QuizStartActivity.class );
-//                String message = String.valueOf(position);
-//                intent.putExtra( EXTRA_MESSAGE, message );
-//                getContext().startActivity(intent);
-
                 ((ListView) parent).performItemClick(view, position, 0);
-
             }
         });
 
