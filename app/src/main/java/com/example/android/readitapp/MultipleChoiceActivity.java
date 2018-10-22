@@ -55,6 +55,16 @@ public class MultipleChoiceActivity extends AppCompatActivity
         textViewAnswer.setText(answers[2]);
         textViewAnswer = findViewById(R.id.multiple_choice_answer4);
         textViewAnswer.setText(answers[3]);
+
+        Button button;
+        button = findViewById(R.id.multiple_choice_answer1);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
+        button = findViewById(R.id.multiple_choice_answer2);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
+        button = findViewById(R.id.multiple_choice_answer3);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
+        button = findViewById(R.id.multiple_choice_answer4);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
     }
 
     private void highlightCorrectAnswer()
@@ -104,6 +114,8 @@ public class MultipleChoiceActivity extends AppCompatActivity
 
             if(correctIndex != 0)
                 button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+            else
+                quizStatus.incrementCorrectAnswers();
         }
     }
 
@@ -118,6 +130,8 @@ public class MultipleChoiceActivity extends AppCompatActivity
 
             if(correctIndex != 1)
                 button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+            else
+                quizStatus.incrementCorrectAnswers();
         }
     }
 
@@ -132,6 +146,8 @@ public class MultipleChoiceActivity extends AppCompatActivity
 
             if(correctIndex != 2)
                 button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+            else
+                quizStatus.incrementCorrectAnswers();
         }
     }
 
@@ -146,6 +162,8 @@ public class MultipleChoiceActivity extends AppCompatActivity
 
             if(correctIndex != 3)
                 button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+            else
+                quizStatus.incrementCorrectAnswers();
         }
     }
 
@@ -153,7 +171,9 @@ public class MultipleChoiceActivity extends AppCompatActivity
     {
         if( quizStatus.quizIsFinished() )
         {
-            // TODO Create EndQuizActivity and start it from here.
+            Intent intent = new Intent(this, QuizEndActivity.class);
+            startActivity(intent);
+            ActivityCompat.finishAffinity(MultipleChoiceActivity.this);
         }
         else
         {

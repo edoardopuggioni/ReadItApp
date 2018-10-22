@@ -3,6 +3,7 @@ package com.example.android.readitapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.AlarmClock;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.TextView;
 
@@ -34,5 +35,6 @@ public class QuizStartActivity extends BaseActivity
 
         Intent intent = new Intent(  getApplicationContext(), MultipleChoiceActivity.class );
         startActivity(intent);
+        ActivityCompat.finishAffinity(QuizStartActivity.this);
     }
 }

@@ -12,10 +12,8 @@
     <string name="welcome_to_the_quiz_about">Welcome to the quiz about</string>
     <string name="start">Start</string>
     <string name="next">Next</string>
-    <string name="most_recent_badges">Most Recent Badges</string>
-    <string name="dragon_slayer">Dragon Slayer</string>
-    <string name="princes_saved">Princes Saved</string>
-    <string name="cinderella_s_badge">Cinderella\'s Badge</string>
-    <string name="other_badges">Other Badges</string>
-    <string name="readit_score_420">ReadIt Score 420</string>
+    <string name="most_recent_badges">Most recent badges</string>
+    <string name="other_badges">Other badges</string>
+    <string name="quiz_completed">Quiz completed!</string>
+    <string name="go_to_homepage">Go to Homepage</string>
 </resources>

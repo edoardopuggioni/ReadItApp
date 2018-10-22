@@ -40,4 +40,9 @@ public class QuizStatus
     {
         currentQuestion++;
     }
+
+    public void incrementCorrectAnswers()
+    {
+        correctAnswers++;
+    }
 }

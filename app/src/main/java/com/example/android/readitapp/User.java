@@ -69,4 +69,9 @@ public class User
     }
 
     public ArrayList<ChallengeParticipation> getChallengesParticipations() { return challengesParticipations; }
+
+    public void addGems( int newGems )
+    {
+        gems += newGems;
+    }
 }
