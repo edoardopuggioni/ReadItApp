@@ -57,7 +57,7 @@ public class ChallengesInDetailActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), BookListActivity.class );
                 //passing the reference to the challenge
-                intent.putExtra( EXTRA_MESSAGE, ""+challengeNumber );
+                intent.putExtra( EXTRA_MESSAGE, "" +challengeNumber );
                 startActivity(intent);
             }
         });

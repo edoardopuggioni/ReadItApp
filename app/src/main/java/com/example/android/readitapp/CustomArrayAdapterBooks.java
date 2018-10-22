@@ -35,11 +35,8 @@ public class CustomArrayAdapterBooks extends ArrayAdapter {
         TextView list_item_book_title = (TextView) convertView.findViewById(R.id.book_title);
         ImageView list_item_challenge_book_cover_ = (ImageView) convertView.findViewById(R.id.bookCover);
 
-
-
         list_item_book_title.setText(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(position).getTitle());
         list_item_challenge_book_cover_.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(position).getCover());
-
 
         return convertView;
     }
