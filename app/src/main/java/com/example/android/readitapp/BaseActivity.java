@@ -30,7 +30,7 @@ public class BaseActivity extends AppCompatActivity {
         if(appManager.getCurrentUser()!=null){
             TextView gemsAmount= (TextView) findViewById(R.id.gemsAmount);
             ImageView ageGroup= (ImageView) findViewById(R.id.ageGroupSymbol);
-            gemsAmount.setText(Integer.toString(appManager.getCurrentUser().gems));
+            gemsAmount.setText(Integer.toString(appManager.getCurrentUser().getGemsTotal()));
 
             switch(appManager.getCurrentUser().getAgeGroup()){
                 case TIGERS:ageGroup.setImageDrawable(this.getResources().getDrawable(R.drawable.lion));

@@ -53,6 +53,8 @@ public class FakeData
         MultipleChoice multipleChoice;
         ArrayList<Question> questions;
         Quiz quiz;
+        Badge badge;
+        ArrayList<Badge> badges;
 
 
         // Init quiz for a book and then init the corresponding book.
@@ -203,7 +205,14 @@ public class FakeData
         pswHash = appManager.md5("1");
 
         // TODO Fill achievements, empty for now.
-        achievements = new Achievements();
+        badges = new ArrayList<>();
+        badge = new Badge( "Griffindor Badge", R.drawable.ic_badge_1, new Date(2018, 07, 25) );
+        badges.add(badge);
+        badge = new Badge( "Hogwarts Medal", R.drawable.ic_badge_medal, new Date(2018, 06, 20) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_trophy, new Date(2018, 05, 15) );
+        badges.add(badge);
+        achievements = new Achievements( 50, badges );
 
         borrowedBooks = new ArrayList<>();
         borrowedBooks.add(books.get(0)); // HP1
@@ -229,14 +238,10 @@ public class FakeData
 
         // Init user 2.
 
-        pswHash = appManager.md5("p2");
+        pswHash = appManager.md5("2");
 
         // TODO Fill achievements, empty for now.
-        achievements = new Achievements();
-
-        //We don't have to create this
-        //challengeParticipation = new ChallengeParticipation(challenges.get(0), 200);
-        //challengeParticipations.add(challengeParticipation);
+//        achievements = new Achievements();
 
         borrowedBooks = new ArrayList<>();
         borrowedBooks.add(books.get(0));

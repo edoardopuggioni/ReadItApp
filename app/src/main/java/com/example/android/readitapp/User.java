@@ -12,8 +12,6 @@ public class User
     private ArrayList<Book> borrowedBooks;
     private ArrayList<Book> returnedBooks;
     private ArrayList<ChallengeParticipation> challengesParticipations;
-    int gems;
-
 
     // The following field seems unnecessary. Every user with the same age group would have the
     // same list, so it doesn't make sense to have the list here in the user object. We can
@@ -31,7 +29,6 @@ public class User
         this.firstName = firstName;
         this.ageGroup = ageGroup;
         this.achievements = achievements;
-        this.gems=gems;
         this.borrowedBooks = borrowedBooks;
         this.returnedBooks = returnedBooks;
         this.challengesParticipations = challengesParticipations;
@@ -59,6 +56,11 @@ public class User
         return ageGroup;
     }
 
+    public Achievements getAchievements()
+    {
+        return achievements;
+    }
+
     public ArrayList<Book> getBorrowedBooks() {
         return borrowedBooks;
     }
@@ -70,8 +72,15 @@ public class User
 
     public ArrayList<ChallengeParticipation> getChallengesParticipations() { return challengesParticipations; }
 
+    public int getGemsTotal()
+    {
+        return achievements.getGemsTotal();
+    }
+
+
     public void addGems( int newGems )
     {
-        gems += newGems;
+        int oldGems = getGemsTotal();
+        achievements.setGemsTotal( oldGems += newGems );
     }
 }
