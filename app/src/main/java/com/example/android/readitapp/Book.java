@@ -3,7 +3,7 @@ package com.example.android.readitapp;
 public class Book
 {
 
-
+    private String isbn;
     private String title;
     private AgeGroupsEnum ageGroup;
     private String summary;
@@ -29,12 +29,7 @@ public class Book
         return quiz;
     }
 
-    public void setQuiz(Quiz quiz)
-    {
-        this.quiz = quiz;
-    }
-
-    private String isbn;
+    public void setQuiz(Quiz quiz) { this.quiz = quiz;}
 
     public String getIsbn() { return isbn; }
 

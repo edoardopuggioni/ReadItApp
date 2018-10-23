@@ -31,6 +31,7 @@
         <activity android:name=".MultipleChoiceActivity" />
         <activity android:name=".BookListActivity" />
         <activity android:name=".QuizEndActivity"></activity>
+        <activity android:name=".BookDetailsActivity"></activity>
     </application>
 
 </manifest>

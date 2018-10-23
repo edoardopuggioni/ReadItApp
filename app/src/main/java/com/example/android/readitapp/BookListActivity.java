@@ -45,10 +45,10 @@ public class BookListActivity extends BaseActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id)
         {
-            Intent intent = new Intent(getApplicationContext(), HomepageActivity.class );
+            Intent intent = new Intent(getApplicationContext(), BookDetailsActivity.class );
             //passing the reference to the challenge
-           // String message = String.valueOf(position);
-            //intent.putExtra( EXTRA_MESSAGE, message );
+            String message = String.valueOf(position);
+            intent.putExtra( EXTRA_MESSAGE, message );
             startActivity(intent);
         }
     }

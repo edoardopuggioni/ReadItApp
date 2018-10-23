@@ -57,6 +57,7 @@ public class FakeData
         ArrayList<Badge> badges;
 
 
+
         // Init quiz for a book and then init the corresponding book.
 
         question = "What are the names of the Weasley twins?";
@@ -70,6 +71,7 @@ public class FakeData
         multipleChoice = new MultipleChoice( question, answers, correctAnswer-1 );
         questions = new ArrayList<>();
         questions.add(multipleChoice);
+
         quiz = new Quiz(questions);
 
         book = new Book("9780747532720", "Harry Potter and the Philosopher's Stone",
@@ -89,11 +91,14 @@ public class FakeData
                         "time, the fabled Philosopher's Stone! All this and muggles too. Now, " +
                         "what are they?",
                 R.drawable.harry_potter_1_bc);
+
         book.setQuiz(quiz);
+
         books.add(book);
 
 
-        // Init quiz for a book and then init the corresponding book.
+
+        // Init quiz for HP2 and then init the HP2 book object.
 
         questions = new ArrayList<>();
 
@@ -106,6 +111,7 @@ public class FakeData
         };
         correctAnswer = 2;
         multipleChoice = new MultipleChoice( question, answers, correctAnswer-1 );
+
         questions.add(multipleChoice);
 
         question = "How do Harry and Ron reach Howgwarts?";
@@ -117,6 +123,7 @@ public class FakeData
         };
         correctAnswer = 1;
         multipleChoice = new MultipleChoice( question, answers, correctAnswer-1 );
+
         questions.add(multipleChoice);
 
         quiz = new Quiz(questions);
@@ -125,9 +132,10 @@ public class FakeData
                 AgeGroupsEnum.DRAGONS,
                 "Harry Potter’s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft And Wizardry for his second year, Harry hears strange whispers echo through empty corridors – and then the attacks start. Students are found as though turned to stone … Dobby’s sinister predictions seem to be coming true. ",
                 R.drawable.harry_potter_2_bc);
-        book.setQuiz(quiz);
-        books.add(book);
 
+        book.setQuiz(quiz);
+
+        books.add(book);
 
         book = new Book("954074232743","Harry Potter and the Prisoner of Azkaban",
                 AgeGroupsEnum.DRAGONS,
@@ -136,7 +144,7 @@ public class FakeData
 
         books.add(book);
 
-        book = new Book("444444444444","Book 4",
+        book = new Book("683094232743","Book 4",
                 AgeGroupsEnum.DRAGONS,
                 "Description 4",
                 R.drawable.dragon);
