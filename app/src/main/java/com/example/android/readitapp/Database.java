@@ -1,5 +1,6 @@
 package com.example.android.readitapp;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Database
@@ -11,7 +12,7 @@ public class Database
         return ourInstance;
     }
 
-    private Database()
+    public Database()
     {
     }
 
@@ -37,5 +38,20 @@ public class Database
             return null;
 
         return user;
+    }
+
+    public ArrayList<Challenge> getChallengesByAgeGroup( AgeGroupsEnum ageGroup )
+    {
+        FakeData fakeData = FakeData.getInstance();
+        ArrayList<Challenge> challenges = fakeData.challenges;
+        ArrayList<Challenge> challengesForAgeGroup = new ArrayList<>();
+
+        for( Challenge c : challenges )
+        {
+            if( c.getAgeGroup().equals(ageGroup) )
+                challengesForAgeGroup.add(c);
+        }
+
+        return challengesForAgeGroup;
     }
 }

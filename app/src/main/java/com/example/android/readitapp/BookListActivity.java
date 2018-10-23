@@ -33,7 +33,7 @@ public class BookListActivity extends BaseActivity {
 
         ArrayList<Book> books = appManager.getCurrentUser().getChallengesParticipations().get(challengeNumber).getChallenge().getBooks();
 
-        CustomArrayAdapterBooks bookListAdapter = new CustomArrayAdapterBooks(getApplicationContext() ,books);
+        CustomArrayAdapterBooks bookListAdapter = new CustomArrayAdapterBooks(getApplicationContext() , books , challengeNumber);
 
         listViewHandle.setAdapter(bookListAdapter);
 
@@ -47,8 +47,10 @@ public class BookListActivity extends BaseActivity {
         {
             Intent intent = new Intent(getApplicationContext(), BookDetailsActivity.class );
             //passing the reference to the challenge
-            String message = String.valueOf(position);
-            intent.putExtra( EXTRA_MESSAGE, message );
+            String invokedPosition = String.valueOf(position);
+            String challengeParticipationNumber = String.valueOf(challengeNumber);
+            intent.putExtra( "invokedPosition" , invokedPosition );
+            intent.putExtra( "challengeParticipationNumber", challengeParticipationNumber );
             startActivity(intent);
         }
     }

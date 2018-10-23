@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class ChallengesActivity extends BaseActivity {
@@ -26,6 +28,8 @@ public class ChallengesActivity extends BaseActivity {
 
         AppManager appManager = AppManager.getInstance();
 
+        //Database database = new Database();
+        //ArrayList<Challenge> challenges = database.getChallengesByAgeGroup(appManager.getCurrentUser().getAgeGroup());
         CustomArrayAdapterChallengesIn challengesAdapter = new CustomArrayAdapterChallengesIn(this ,appManager.getCurrentUser().getChallengesParticipations() );
 
         //adding header to the ListView
