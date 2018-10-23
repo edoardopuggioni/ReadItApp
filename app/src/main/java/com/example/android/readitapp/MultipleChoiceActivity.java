@@ -58,13 +58,13 @@ public class MultipleChoiceActivity extends AppCompatActivity
 
         Button button;
         button = findViewById(R.id.multiple_choice_answer1);
-        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorSecondary),PorterDuff.Mode.MULTIPLY);
         button = findViewById(R.id.multiple_choice_answer2);
-        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorSecondary),PorterDuff.Mode.MULTIPLY);
         button = findViewById(R.id.multiple_choice_answer3);
-        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorSecondary),PorterDuff.Mode.MULTIPLY);
         button = findViewById(R.id.multiple_choice_answer4);
-        button.getBackground().setColorFilter(getResources().getColor(R.color.colorYellowDark),PorterDuff.Mode.MULTIPLY);
+        button.getBackground().setColorFilter(getResources().getColor(R.color.colorSecondary),PorterDuff.Mode.MULTIPLY);
     }
 
     private void highlightCorrectAnswer()

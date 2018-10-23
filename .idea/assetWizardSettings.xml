@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_trophy" />
-                            <entry key="sourceFile" value="C:\Users\edoar\Google Drive\Chalmers\Mobile computing\Project\Assets\badges\svg\trophy.svg" />
+                            <entry key="outputName" value="ic_badge_medal_2" />
+                            <entry key="sourceFile" value="C:\Users\edoar\Google Drive\Chalmers\Mobile computing\Project\Assets\badges\svg\medal-2.svg" />
                           </map>
                         </option>
                       </PersistentState>

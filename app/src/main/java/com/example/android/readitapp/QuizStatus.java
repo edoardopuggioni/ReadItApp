@@ -15,6 +15,11 @@ public class QuizStatus
         this.correctAnswers = correctAnswers;
     }
 
+    public Book getBook()
+    {
+        return book;
+    }
+
     public Quiz getQuiz()
     {
         return quiz;

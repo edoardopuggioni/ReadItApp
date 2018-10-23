@@ -32,8 +32,7 @@ public class QuizEndActivity extends AppCompatActivity
 
         User user = appManager.getCurrentUser();
         user.addGems(correctAnswers);
-        // TODO Add gems to challenge
-//        user.get
+        user.addGemsForChallenge( quizStatus.getBook(), correctAnswers );
 
         ImageView gem = findViewById(R.id.quiz_end_gem);
         Animation slideLeft = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_left);
