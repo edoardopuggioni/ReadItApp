@@ -11,7 +11,7 @@ import java.util.Date;
 public class FakeData
 {
     ArrayList<User> users;
-    ArrayList<Book> books;
+    ArrayList<Book> booksHarryPotter;
     ArrayList<Challenge> challenges;
 
     private static final FakeData ourInstance = new FakeData();
@@ -32,7 +32,7 @@ public class FakeData
         // Init the lists declared outside the constructor: we will need to access them from
         // outside the object FakeData.
         users = new ArrayList<>();
-        books = new ArrayList<>();
+        booksHarryPotter = new ArrayList<>();
         challenges = new ArrayList<>();
 
         // Now we declare the variable we will use to create new objects to populate the fake
@@ -94,7 +94,7 @@ public class FakeData
 
         book.setQuiz(quiz);
 
-        books.add(book);
+        booksHarryPotter.add(book);
 
 
 
@@ -135,44 +135,44 @@ public class FakeData
 
         book.setQuiz(quiz);
 
-        books.add(book);
+        booksHarryPotter.add(book);
 
         book = new Book("954074232743","Harry Potter and the Prisoner of Azkaban",
                 AgeGroupsEnum.DRAGONS,
                 "When the Knight Bus crashes through the darkness and screeches to a halt in front of him, it’s the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run – and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry’s tea leaves … But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss",
                 R.drawable.harry_potter_3_bc);
 
-        books.add(book);
+        booksHarryPotter.add(book);
 
         book = new Book("683094232743","Book 4",
                 AgeGroupsEnum.DRAGONS,
                 "Description 4",
                 R.drawable.dragon);
-        books.add(book);
+        booksHarryPotter.add(book);
 
         book = new Book("555555555555","Book 5",
                 AgeGroupsEnum.DRAGONS,
                 "Description 5",
                 R.drawable.dragon);
-        books.add(book);
+        booksHarryPotter.add(book);
 
         book = new Book("666666666666","Book 6",
                 AgeGroupsEnum.DRAGONS,
                 "Description 6",
                 R.drawable.dragon);
-        books.add(book);
+        booksHarryPotter.add(book);
 
         book = new Book("777777777777","Book 7",
                 AgeGroupsEnum.DRAGONS,
                 "Description 7",
                 R.drawable.dragon);
-        books.add(book);
+        booksHarryPotter.add(book);
 
         book = new Book("888888888888","Book 8",
                 AgeGroupsEnum.DRAGONS,
                 "Description 6",
                 R.drawable.dragon);
-        books.add(book);
+        booksHarryPotter.add(book);
 
 
 
@@ -180,10 +180,10 @@ public class FakeData
 
         // Create an array list of books for specific challenge.
         challengeBooks = new ArrayList<>();
-        challengeBooks.add(books.get(0));
-        challengeBooks.add(books.get(1));
-        challengeBooks.add(books.get(3));
-        challengeBooks.add(books.get(4));
+        challengeBooks.add(booksHarryPotter.get(0));
+        challengeBooks.add(booksHarryPotter.get(1));
+        challengeBooks.add(booksHarryPotter.get(3));
+        challengeBooks.add(booksHarryPotter.get(4));
 
         challenge = new Challenge("Harry Potter Challenge", AgeGroupsEnum.DRAGONS,
                 new Date(118, Calendar.OCTOBER, 26), new Date(2018, 12, 15),
@@ -193,9 +193,9 @@ public class FakeData
 
         // Create an array list of books for specific challenge.
         challengeBooks = new ArrayList<>();
-        challengeBooks.add(books.get(1));
-        challengeBooks.add(books.get(2));
-        challengeBooks.add(books.get(3));
+        challengeBooks.add(booksHarryPotter.get(1));
+        challengeBooks.add(booksHarryPotter.get(2));
+        challengeBooks.add(booksHarryPotter.get(3));
 
         challenge = new Challenge("Grimm's fairy tales", AgeGroupsEnum.BUNNIES,
                 new Date(117,10,1), new Date (2018,1,29),
@@ -223,16 +223,16 @@ public class FakeData
         achievements = new Achievements( 50, badges );
 
         borrowedBooks = new ArrayList<>();
-        borrowedBooks.add(books.get(0)); // HP1
-        borrowedBooks.add(books.get(2)); // HP3
+        borrowedBooks.add(booksHarryPotter.get(0)); // HP1
+        borrowedBooks.add(booksHarryPotter.get(2)); // HP3
 
         returnedBooks = new ArrayList<>();
-        returnedBooks.add(books.get(1));
-        returnedBooks.add(books.get(3)); // Book4
-        returnedBooks.add(books.get(4)); // Book5
-        returnedBooks.add(books.get(5)); // Book6
-        returnedBooks.add(books.get(6)); // Book7
-        returnedBooks.add(books.get(7)); // Book8
+        returnedBooks.add(booksHarryPotter.get(1));
+        returnedBooks.add(booksHarryPotter.get(3)); // Book4
+        returnedBooks.add(booksHarryPotter.get(4)); // Book5
+        returnedBooks.add(booksHarryPotter.get(5)); // Book6
+        returnedBooks.add(booksHarryPotter.get(6)); // Book7
+        returnedBooks.add(booksHarryPotter.get(7)); // Book8
 
         challengesParticipations = new ArrayList<>();
         challengesParticipations.add(new ChallengeParticipation(challenges.get(0),500));
@@ -252,10 +252,10 @@ public class FakeData
 //        achievements = new Achievements();
 
         borrowedBooks = new ArrayList<>();
-        borrowedBooks.add(books.get(0));
+        borrowedBooks.add(booksHarryPotter.get(0));
 
         returnedBooks = new ArrayList<>();
-        returnedBooks.add(books.get(1));
+        returnedBooks.add(booksHarryPotter.get(1));
 
         challengesParticipations = new ArrayList<>();
         challengesParticipations.add(new ChallengeParticipation(challenges.get(0),70));

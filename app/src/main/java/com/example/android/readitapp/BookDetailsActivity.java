@@ -32,7 +32,7 @@ public class BookDetailsActivity extends BaseActivity {
         //fill TextViews with data
         bookTitleContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(bookNumber).getTitle());
         bookCoverContainer.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(bookNumber).getCover());
-        bookIsbnContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(bookNumber).getIsbn());
+        bookIsbnContainer.setText("ISBN: " +appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(bookNumber).getIsbn());
         bookPlotContainer.setText(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(bookNumber).getSummary());
     }
 }
