@@ -16,8 +16,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:navigationIcon="@drawable/ic_action_home">
 
-    <TextView
-
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="points"
@@ -25,11 +24,11 @@
         android:id="@+id/gemsAmount" />
 
         <ImageView
-            android:id="@+id/ageGroupSymbol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/default_picture"/>
+        android:id="@+id/ageGroupSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/default_picture"/>
 
     </android.support.v7.widget.Toolbar>
 
