@@ -92,7 +92,7 @@ public class MultipleChoiceActivity extends AppCompatActivity
         }
 
         if( button != null )
-            button.getBackground().setColorFilter(Color.GREEN,PorterDuff.Mode.MULTIPLY);
+            button.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
     }
 
     public void showNextButton()
@@ -113,7 +113,7 @@ public class MultipleChoiceActivity extends AppCompatActivity
             showNextButton();
 
             if(correctIndex != 0)
-                button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+                button.getBackground().setColorFilter(getResources().getColor(R.color.colorRed), PorterDuff.Mode.MULTIPLY);
             else
                 quizStatus.incrementCorrectAnswers();
         }
@@ -129,7 +129,7 @@ public class MultipleChoiceActivity extends AppCompatActivity
             showNextButton();
 
             if(correctIndex != 1)
-                button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+                button.getBackground().setColorFilter(getResources().getColor(R.color.colorRed), PorterDuff.Mode.MULTIPLY);
             else
                 quizStatus.incrementCorrectAnswers();
         }
@@ -145,7 +145,7 @@ public class MultipleChoiceActivity extends AppCompatActivity
             showNextButton();
 
             if(correctIndex != 2)
-                button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+                button.getBackground().setColorFilter(getResources().getColor(R.color.colorRed), PorterDuff.Mode.MULTIPLY);
             else
                 quizStatus.incrementCorrectAnswers();
         }
@@ -161,7 +161,7 @@ public class MultipleChoiceActivity extends AppCompatActivity
             showNextButton();
 
             if(correctIndex != 3)
-                button.getBackground().setColorFilter(Color.RED,PorterDuff.Mode.MULTIPLY);
+                button.getBackground().setColorFilter(getResources().getColor(R.color.colorRed), PorterDuff.Mode.MULTIPLY);
             else
                 quizStatus.incrementCorrectAnswers();
         }

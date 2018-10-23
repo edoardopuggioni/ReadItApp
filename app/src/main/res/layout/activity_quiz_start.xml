@@ -40,11 +40,12 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="startQuiz"
         android:text="@string/start"
+        android:background="@drawable/placeholder_style_yellow_round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

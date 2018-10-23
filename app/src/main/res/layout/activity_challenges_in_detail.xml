@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/placeholder_style_big_boxes"
+        android:background="@drawable/placeholder_style_yellow_round"
         android:padding="10dp"
         android:text="See related books"
         app:layout_constraintEnd_toEndOf="parent"

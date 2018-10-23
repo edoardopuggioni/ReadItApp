@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class QuizEndActivity extends AppCompatActivity
@@ -19,6 +20,10 @@ public class QuizEndActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_end);
+
+        ProgressBar progressBar = findViewById(R.id.end_quiz_progress_bar);
+        progressBar.setProgress(100);
+        // TODO Change color of progress bar to primary color.
 
         AppManager appManager = AppManager.getInstance();
         QuizStatus quizStatus = appManager.getQuizStatus();
@@ -33,6 +38,9 @@ public class QuizEndActivity extends AppCompatActivity
         User user = appManager.getCurrentUser();
         user.addGems(correctAnswers);
         user.addGemsForChallenge( quizStatus.getBook(), correctAnswers );
+
+        // TODO Add ChallengeParticipation to user if this is the first book he reads for a challenge.
+        // TODO Remove book from returned books.
 
         ImageView gem = findViewById(R.id.quiz_end_gem);
         Animation slideLeft = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_left);

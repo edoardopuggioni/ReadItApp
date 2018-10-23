@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/placeholder_style_middle_green_boxes">
+    android:background="@drawable/placeholder_style_green_round">
 
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:text="Harry Potter challenge"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="18sp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
         android:layout_marginLeft="8dp"
         android:text="30"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/you_earned_label"
         app:layout_constraintStart_toEndOf="@+id/you_earned_label"
         app:layout_constraintTop_toTopOf="@+id/you_earned_label" />
@@ -42,7 +42,7 @@
         android:layout_marginLeft="8dp"
         android:text="20"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/days_to_end_label"
         app:layout_constraintStart_toEndOf="@+id/days_to_end_label"
         app:layout_constraintTop_toTopOf="@+id/days_to_end_label" />
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Days to end:"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/challenge_title"
         app:layout_constraintTop_toBottomOf="@+id/challenge_title" />
 
@@ -78,7 +78,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:text="You earned:"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/days_to_end_label"
         app:layout_constraintTop_toBottomOf="@+id/days_to_end_label" />

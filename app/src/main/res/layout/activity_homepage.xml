@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
+
         android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -27,7 +28,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="32dp"
-        android:background="@color/colorSecondary"
+        android:background="@drawable/placeholder_style_yellow_round"
         app:layout_constraintBottom_toTopOf="@+id/homepage_quiz_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -80,7 +81,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/placeholder_style_green_round"
         android:onClick="goToActivity"
         android:text="@string/readit_quiz"
         app:layout_constraintBottom_toTopOf="@+id/homepage_achievements_button"
@@ -99,7 +100,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/placeholder_style_green_round"
         android:onClick="goToActivity"
         android:text="@string/readit_achievements"
         app:layout_constraintBottom_toTopOf="@+id/homepage_challenges_button"
@@ -118,7 +119,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/placeholder_style_middle_green_boxes"
+        android:background="@drawable/placeholder_style_green_round"
         android:onClick="goToActivity"
         android:text="@string/readit_challenges"
         app:layout_constraintBottom_toTopOf="@+id/homepage_logout_button"
@@ -137,7 +138,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="32dp"
-        android:background="@color/colorRed"
+        android:background="@drawable/placeholder_style_red_round"
         android:onClick="goToActivity"
         android:text="@string/homepage_logout"
         app:layout_constraintBottom_toBottomOf="parent"

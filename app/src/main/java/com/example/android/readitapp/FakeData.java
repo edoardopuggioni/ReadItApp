@@ -204,23 +204,47 @@ public class FakeData
         challenges.add(challenge);
 
 
+
+        // Init badges.
+
+        badges = new ArrayList<>();
+        badge = new Badge( "Griffindor Badge", R.drawable.ic_badge_1, new Date(2018, 07, 25) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_trophy, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Hogwarts Medal", R.drawable.ic_badge_medal_2, new Date(2018, 06, 20) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badges_heart, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_crown, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badges_heart, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_crown, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badges_heart, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_crown, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badges_heart, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_crown, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badges_heart, new Date(2018, 05, 15) );
+        badges.add(badge);
+        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_crown, new Date(2018, 05, 15) );
+        badges.add(badge);
+
+
         // Init users list.
         users = new ArrayList<>();
-
 
         // Init user 1.
 
         pswHash = appManager.md5("1");
 
         // TODO Fill achievements, empty for now.
-        badges = new ArrayList<>();
-        badge = new Badge( "Griffindor Badge", R.drawable.ic_badge_1, new Date(2018, 07, 25) );
-        badges.add(badge);
-        badge = new Badge( "Hogwarts Medal", R.drawable.ic_badge_medal_2, new Date(2018, 06, 20) );
-        badges.add(badge);
-        badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_trophy, new Date(2018, 05, 15) );
-        badges.add(badge);
-        achievements = new Achievements( 50, badges );
+        achievements = new Achievements( 50, new ArrayList<Badge>(badges) );
 
         borrowedBooks = new ArrayList<>();
         borrowedBooks.add(booksHarryPotter.get(0)); // HP1

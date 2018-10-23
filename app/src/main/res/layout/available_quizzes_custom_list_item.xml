@@ -9,6 +9,7 @@
         android:id="@+id/available_quizzes_item_button"
         android:layout_width="0dp"
         android:layout_height="54dp"
+        android:background="@drawable/placeholder_style_green_round"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="8dp"

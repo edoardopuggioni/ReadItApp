@@ -17,11 +17,15 @@
         app:navigationIcon="@drawable/ic_action_home">
 
         <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="points"
-        android:layout_gravity="right"
-        android:id="@+id/gemsAmount" />
+            android:id="@+id/gemsAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="points"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="346dp"
+            tools:layout_editor_absoluteY="19dp" />
 
         <ImageView
         android:id="@+id/ageGroupSymbol"

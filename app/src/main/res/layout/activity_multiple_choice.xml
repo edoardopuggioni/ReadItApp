@@ -24,13 +24,13 @@
     <Button
         android:id="@+id/multiple_choice_next"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="64dp"
-        android:background="@color/colorBlueDark"
+        android:background="@drawable/placeholder_style_blue_round"
         android:onClick="nextQuestion"
         android:text="@string/next"
         android:visibility="invisible"
@@ -121,5 +121,6 @@
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+        <!--android:progressTint="@color/colorPrimary"-->
 
 </android.support.constraint.ConstraintLayout>
