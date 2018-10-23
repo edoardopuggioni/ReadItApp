@@ -81,11 +81,17 @@ public class User
     public void addGems( int newGems )
     {
         int oldGems = getGemsTotal();
-        achievements.setGemsTotal( oldGems += newGems );
+        achievements.setGemsTotal( oldGems + newGems );
     }
 
-    public void addGemsForChallenge( Book book )
+    public void addGemsForChallenge( Book book, int gems )
     {
-
+        ArrayList<Book> books;
+        for( ChallengeParticipation c : challengesParticipations )
+        {
+            books = c.getChallenge().getBooks();
+            if( books.contains(book) )
+                c.addGems(gems);
+        }
     }
 }

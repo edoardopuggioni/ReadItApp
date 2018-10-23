@@ -191,7 +191,7 @@ public class FakeData
         badges = new ArrayList<>();
         badge = new Badge( "Griffindor Badge", R.drawable.ic_badge_1, new Date(2018, 07, 25) );
         badges.add(badge);
-        badge = new Badge( "Hogwarts Medal", R.drawable.ic_badge_medal, new Date(2018, 06, 20) );
+        badge = new Badge( "Hogwarts Medal", R.drawable.ic_badge_medal_2, new Date(2018, 06, 20) );
         badges.add(badge);
         badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_trophy, new Date(2018, 05, 15) );
         badges.add(badge);

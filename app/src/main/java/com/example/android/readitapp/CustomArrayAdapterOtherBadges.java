@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -33,9 +34,11 @@ public class CustomArrayAdapterOtherBadges extends ArrayAdapter
 
         // Lookup view to catch layout elements.
         ImageView imageViewBadge = (ImageView) convertView.findViewById(R.id.other_badges_imageView);
+        TextView textViewTitle = (TextView) convertView.findViewById(R.id.other_badges_title);
 
         // Populate the data into the template view using the data object.
         imageViewBadge.setImageResource( badge.getIcon() );
+        textViewTitle.setText( badge.getTitle() );
 
         // Return the completed view to render on screen
         return convertView;
