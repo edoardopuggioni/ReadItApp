@@ -30,7 +30,10 @@ public class QuizEndActivity extends AppCompatActivity
         else
             gemsEarned.setText("You earned " + correctAnswers + " gem");
 
-        appManager.getCurrentUser().addGems(correctAnswers);
+        User user = appManager.getCurrentUser();
+        user.addGems(correctAnswers);
+        // TODO Add gems to challenge
+//        user.get
 
         ImageView gem = findViewById(R.id.quiz_end_gem);
         Animation slideLeft = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_left);

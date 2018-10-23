@@ -83,4 +83,9 @@ public class User
         int oldGems = getGemsTotal();
         achievements.setGemsTotal( oldGems += newGems );
     }
+
+    public void addGemsForChallenge( Book book )
+    {
+
+    }
 }

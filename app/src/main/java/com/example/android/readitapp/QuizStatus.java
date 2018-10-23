@@ -2,13 +2,15 @@ package com.example.android.readitapp;
 
 public class QuizStatus
 {
+    private Book book;
     private Quiz quiz;
     private int currentQuestion;
     private int correctAnswers;
 
-    public QuizStatus(Quiz quiz, int currentQuestion, int correctAnswers)
+    public QuizStatus( Book book, int currentQuestion, int correctAnswers)
     {
-        this.quiz = quiz;
+        this.book = book;
+        this.quiz = book.getQuiz();
         this.currentQuestion = currentQuestion;
         this.correctAnswers = correctAnswers;
     }

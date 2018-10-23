@@ -25,7 +25,7 @@ public class QuizStartActivity extends BaseActivity
         TextView textView = findViewById(R.id.quiz_start_title);
         textView.setText(title);
 
-        QuizStatus quizStatus = new QuizStatus( book.getQuiz(), 0, 0);
+        QuizStatus quizStatus = new QuizStatus( book, 0, 0);
         appManager.setQuizStatus(quizStatus);
     }
 

@@ -31,7 +31,7 @@
         android:background="@drawable/placeholder_style_big_boxes"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"
-        android:padding="32dp"
+        android:padding="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
