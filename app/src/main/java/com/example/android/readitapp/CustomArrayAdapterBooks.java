@@ -13,16 +13,18 @@ import java.util.ArrayList;
 
 public class CustomArrayAdapterBooks extends ArrayAdapter {
 
+private final int challengeParticipationNumber;
 
-
-    public CustomArrayAdapterBooks (Context context, ArrayList<Book> books) {
+    public CustomArrayAdapterBooks (Context context, ArrayList<Book> books, int challengeParticipationNumber) {
 
         super(context, 0 , books);
+        this.challengeParticipationNumber = challengeParticipationNumber;
     }
 
     @Override
     public View getView (int position, View convertView, ViewGroup parent) {
 
+        Book book;
 
         //challengeParticipation challengeParticipation = (ChallengeParticipation) getItem(position);
          AppManager appManager = AppManager.getInstance();
@@ -34,9 +36,10 @@ public class CustomArrayAdapterBooks extends ArrayAdapter {
         //handlers to the elements in activity .xml
         TextView list_item_book_title = (TextView) convertView.findViewById(R.id.book_title);
         ImageView list_item_challenge_book_cover_ = (ImageView) convertView.findViewById(R.id.bookCover);
-
-        list_item_book_title.setText(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(position).getTitle());
-        list_item_challenge_book_cover_.setImageResource(appManager.getCurrentUser().getChallengesParticipations().get(0).getChallenge().getBooks().get(position).getCover());
+        book = appManager.getCurrentUser().getChallengesParticipations()
+                .get(challengeParticipationNumber).getChallenge().getBooks().get(position);
+        list_item_book_title.setText(book.getTitle());
+        list_item_challenge_book_cover_.setImageResource(book.getCover());
 
         return convertView;
     }

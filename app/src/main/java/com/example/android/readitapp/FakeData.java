@@ -10,9 +10,10 @@ import java.util.Date;
 
 public class FakeData
 {
-    ArrayList<User> users;
-    ArrayList<Book> booksHarryPotter;
-    ArrayList<Challenge> challenges;
+    public ArrayList<User> users;
+    public ArrayList<Book> booksHarryPotter;
+    public ArrayList<Book> booksHistory;
+    public ArrayList<Challenge> challenges;
 
     private static final FakeData ourInstance = new FakeData();
 
@@ -33,6 +34,7 @@ public class FakeData
         // outside the object FakeData.
         users = new ArrayList<>();
         booksHarryPotter = new ArrayList<>();
+        booksHistory = new ArrayList<>();
         challenges = new ArrayList<>();
 
         // Now we declare the variable we will use to create new objects to populate the fake
@@ -40,13 +42,11 @@ public class FakeData
         String pswHash;
         Achievements achievements;
         User user;
-        int gems;
         ArrayList<Book> borrowedBooks;
         ArrayList<Book> returnedBooks;
         ArrayList<ChallengeParticipation> challengesParticipations;
         Book book;
         Challenge challenge;
-        ArrayList<Book> challengeBooks;
         String question;
         String[] answers;
         int correctAnswer;
@@ -97,7 +97,6 @@ public class FakeData
         booksHarryPotter.add(book);
 
 
-
         // Init quiz for HP2 and then init the HP2 book object.
 
         questions = new ArrayList<>();
@@ -137,6 +136,7 @@ public class FakeData
 
         booksHarryPotter.add(book);
 
+
         book = new Book("954074232743","Harry Potter and the Prisoner of Azkaban",
                 AgeGroupsEnum.DRAGONS,
                 "When the Knight Bus crashes through the darkness and screeches to a halt in front of him, it’s the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run – and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry’s tea leaves … But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss",
@@ -144,62 +144,37 @@ public class FakeData
 
         booksHarryPotter.add(book);
 
-        book = new Book("683094232743","Book 4",
+
+
+        book = new Book("683094232743","Carrie’s War",
                 AgeGroupsEnum.DRAGONS,
-                "Description 4",
-                R.drawable.dragon);
-        booksHarryPotter.add(book);
+                "Carrie’s War is a coming of age story with a twist. While visiting the small Welsh mining town where she was billeted during World War II, Carrie Willow, a 42 year old widow with four children, tells them the story of her evacuation. At the start of the war, Carrie, then 11 and her younger brother Nick, 9, were put on a train along with so many other school children, to escape the anticipated bombing of London by the Germans. ",
+                R.drawable.carries_war_bc);
+        booksHistory.add(book);
 
-        book = new Book("555555555555","Book 5",
+        book = new Book("777094232743","The Girl in the Mask",
                 AgeGroupsEnum.DRAGONS,
-                "Description 5",
-                R.drawable.dragon);
-        booksHarryPotter.add(book);
+                "Sophia and her cousin Jack have been very much on their own, after Sophia's father left four years earlier for Jamaica in the West Indies, where he owns a plantation. When he unexpectedly returns home, bringing Sophia's Aunt Amelia with him, he finds Sophia is not the lady he expected. His steward has been fired by Sophia for stealing from the estate, as well as her governess who was to teach and chaperone her. Instead he finds her learning Latin, Greek and mathematics, all subjects that to her father's thinking won't be of use to her as a married woman. As a lady of birth and breeding he expects her to be accomplished in things that matter; embroidery, painting and dancing.",
+                R.drawable.the_girl_in_the_mask);
+        booksHistory.add(book);
 
-        book = new Book("666666666666","Book 6",
+        book = new Book("990074232743","Anne of Green Gables",
                 AgeGroupsEnum.DRAGONS,
-                "Description 6",
-                R.drawable.dragon);
-        booksHarryPotter.add(book);
-
-        book = new Book("777777777777","Book 7",
-                AgeGroupsEnum.DRAGONS,
-                "Description 7",
-                R.drawable.dragon);
-        booksHarryPotter.add(book);
-
-        book = new Book("888888888888","Book 8",
-                AgeGroupsEnum.DRAGONS,
-                "Description 6",
-                R.drawable.dragon);
-        booksHarryPotter.add(book);
-
-
+                "Anne of Green Gables, novel by Canadian novelist Lucy Maud Montgomery published in 1908. A charming but sentimental story of a spirited and unconventional orphan girl who finds a home with an elderly couple, the novel was based on the author’s own girlhood experiences and on the rural life and traditions of Prince Edward Island. A former journalist and schoolteacher, Montgomery achieved worldwide success with both adults and children after the novel’s publication. Its six sequels, tracing Anne from girlhood to motherhood, were less popular.",
+                R.drawable.anne_green_gables);
+        booksHistory.add(book);
 
         // Init challenges
 
-        // Create an array list of books for specific challenge.
-        challengeBooks = new ArrayList<>();
-        challengeBooks.add(booksHarryPotter.get(0));
-        challengeBooks.add(booksHarryPotter.get(1));
-        challengeBooks.add(booksHarryPotter.get(3));
-        challengeBooks.add(booksHarryPotter.get(4));
-
         challenge = new Challenge("Harry Potter Challenge", AgeGroupsEnum.DRAGONS,
                 new Date(118, Calendar.OCTOBER, 26), new Date(2018, 12, 15),
-                challengeBooks, "Info is missing",
+                booksHarryPotter, "Info is missing",
                 R.drawable.hp_challenge_cover);
         challenges.add(challenge);
 
-        // Create an array list of books for specific challenge.
-        challengeBooks = new ArrayList<>();
-        challengeBooks.add(booksHarryPotter.get(1));
-        challengeBooks.add(booksHarryPotter.get(2));
-        challengeBooks.add(booksHarryPotter.get(3));
-
-        challenge = new Challenge("Grimm's fairy tales", AgeGroupsEnum.BUNNIES,
+        challenge = new Challenge("History Challenge", AgeGroupsEnum.DRAGONS,
                 new Date(117,10,1), new Date (2018,1,29),
-                challengeBooks,"No info yet",
+                booksHistory,"No info yet",
                 R.drawable.default_picture);
         challenges.add(challenge);
 
@@ -252,11 +227,11 @@ public class FakeData
 
         returnedBooks = new ArrayList<>();
         returnedBooks.add(booksHarryPotter.get(1));
-        returnedBooks.add(booksHarryPotter.get(3)); // Book4
-        returnedBooks.add(booksHarryPotter.get(4)); // Book5
-        returnedBooks.add(booksHarryPotter.get(5)); // Book6
-        returnedBooks.add(booksHarryPotter.get(6)); // Book7
-        returnedBooks.add(booksHarryPotter.get(7)); // Book8
+        //returnedBooks.add(booksHarryPotter.get()); // Book4
+        //returnedBooks.add(booksHarryPotter.get(4)); // Book5
+        //returnedBooks.add(booksHarryPotter.get(5)); // Book6
+        //returnedBooks.add(booksHarryPotter.get(6)); // Book7
+        //returnedBooks.add(booksHarryPotter.get(7)); // Book8
 
         challengesParticipations = new ArrayList<>();
         challengesParticipations.add(new ChallengeParticipation(challenges.get(0),500));
