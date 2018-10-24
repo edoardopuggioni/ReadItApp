@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/challenge_days_to_end_value"
+        android:id="@+id/challenge_gems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -65,9 +65,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:contentDescription="gem_image"
-        app:layout_constraintBottom_toBottomOf="@+id/challenge_days_to_end_value"
-        app:layout_constraintStart_toEndOf="@+id/challenge_days_to_end_value"
-        app:layout_constraintTop_toTopOf="@+id/challenge_days_to_end_value"
+        app:layout_constraintBottom_toBottomOf="@+id/challenge_gems"
+        app:layout_constraintStart_toEndOf="@+id/challenge_gems"
+        app:layout_constraintTop_toTopOf="@+id/challenge_gems"
         app:srcCompat="@drawable/ic_gem"
         tools:ignore="VectorDrawableCompat" />
 
