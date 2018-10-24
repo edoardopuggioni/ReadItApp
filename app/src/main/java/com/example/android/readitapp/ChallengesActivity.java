@@ -36,9 +36,11 @@ public class ChallengesActivity extends BaseActivity {
         listViewHandleIn = (ListView) findViewById(R.id.list_view_challenges_in);
         listViewHandleIn.setAdapter(challengesAdapter);
 
-        CustomArrayAdapterAvailableChallenges challengesAvailableAdapter = new CustomArrayAdapterAvailableChallenges(this, challenges );
-        listViewHandleAvailable = (ListView) findViewById(R.id.list_view_challenges_available);
-        listViewHandleAvailable.setAdapter(challengesAvailableAdapter);
+        //Temporary disabled - it's not working with scroll
+
+        //CustomArrayAdapterAvailableChallenges challengesAvailableAdapter = new CustomArrayAdapterAvailableChallenges(this, challenges );
+        //listViewHandleAvailable = (ListView) findViewById(R.id.list_view_challenges_available);
+        //listViewHandleAvailable.setAdapter(challengesAvailableAdapter);
 
         //adding header to the ListView
         LayoutInflater inflater = getLayoutInflater();

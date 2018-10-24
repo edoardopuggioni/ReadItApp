@@ -36,6 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <ListView
+        android:visibility="invisible"
         android:id="@+id/list_view_challenges_available"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +46,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/pla"
+        android:background="@drawable/placeholder_style_yellow_round"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"
         android:padding="24dp"
