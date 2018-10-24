@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.support.v4.app.ActivityCompat;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class QuizStartActivity extends BaseActivity
@@ -21,9 +22,13 @@ public class QuizStartActivity extends BaseActivity
         AppManager appManager = AppManager.getInstance();
         Book book = appManager.getCurrentUser().getReturnedBooks().get(bookIndex);
         String title = book.getTitle();
+        int imageResource = book.getCover();
 
         TextView textView = findViewById(R.id.quiz_start_title);
         textView.setText(title);
+
+        ImageView imageView = findViewById(R.id.quiz_start_cover);
+        imageView.setImageResource(imageResource);
 
         QuizStatus quizStatus = new QuizStatus( book, 0, 0);
         appManager.setQuizStatus(quizStatus);

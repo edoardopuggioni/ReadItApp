@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:text="@string/welcome_to_the_quiz_about"
@@ -41,14 +41,29 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="54dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/placeholder_style_yellow_round"
         android:onClick="startQuiz"
         android:text="@string/start"
-        android:background="@drawable/placeholder_style_yellow_round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/quiz_start_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quiz_start_title" />
+        app:layout_constraintTop_toBottomOf="@+id/quiz_start_title"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/anne_green_gables" />
 
 </android.support.constraint.ConstraintLayout>
