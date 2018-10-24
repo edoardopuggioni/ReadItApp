@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/placeholder_style_middle_green_boxes">
+
+
+    <TextView
+        android:id="@+id/challenge_title_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Harry Potter challenge"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/days_to_end_value_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/days_to_end_label"
+        app:layout_constraintStart_toEndOf="@+id/days_to_end_label_available"
+        app:layout_constraintTop_toTopOf="@+id/days_to_end_label_available" />
+
+    <TextView
+        android:id="@+id/days_to_end_label_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Days to end:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/challenge_title_available"
+        app:layout_constraintTop_toBottomOf="@+id/challenge_title_available" />
+
+</android.support.constraint.ConstraintLayout>

@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ChallengesActivity">
 
-
-
     <include
         android:id="@+id/include"
         layout="@layout/activity_base"
@@ -18,25 +16,43 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:scrollbars="none"
-        android:id="@+id/list_view"
+        android:id="@+id/list_view_challenges_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/placeholder_style_yellow_round"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"
         android:padding="24dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        tools:listheader="Abc" />
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <ListView
+        android:id="@+id/list_view_challenges_available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/pla"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:padding="24dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_view_challenges_in" />
 
 
 </android.support.constraint.ConstraintLayout>
