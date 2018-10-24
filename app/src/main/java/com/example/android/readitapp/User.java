@@ -119,7 +119,10 @@ public class User
                 }
             }
         }
+    }
 
-
+    public void removeBookFromReturned( Book book )
+    {
+        returnedBooks.remove(book);
     }
 }

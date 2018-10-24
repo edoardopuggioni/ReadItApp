@@ -45,7 +45,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/pla"
+        android:background="@drawable/placeholder_style_yellow_round"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"
         android:padding="24dp"

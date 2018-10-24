@@ -19,7 +19,7 @@ public class QuizEndActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_end);
+        setContentView(R.layout.layout.activity_quiz_end);
 
         ProgressBar progressBar = findViewById(R.id.end_quiz_progress_bar);
         progressBar.setProgress(100);
@@ -38,8 +38,7 @@ public class QuizEndActivity extends AppCompatActivity
         User user = appManager.getCurrentUser();
         user.addGems(correctAnswers);
         user.addGemsForChallenge( quizStatus.getBook(), correctAnswers );
-
-        // TODO Remove book from returned books.
+        user.removeBookFromReturned( quizStatus.getBook() );
 
         ImageView gem = findViewById(R.id.quiz_end_gem);
         Animation slideLeft = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_left);
