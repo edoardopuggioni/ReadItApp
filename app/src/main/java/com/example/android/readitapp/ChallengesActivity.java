@@ -21,25 +21,31 @@ public class ChallengesActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenges);
 
-        final ListView listViewHandle = (ListView) findViewById(R.id.list_view);
+        ListView listViewHandleAvailable;
+        ListView listViewHandleIn;
 
         // creating toolbar
         initToolbar(R.id.toolbar);
 
         AppManager appManager = AppManager.getInstance();
 
-        //Database database = new Database();
-        //ArrayList<Challenge> challenges = database.getChallengesByAgeGroup(appManager.getCurrentUser().getAgeGroup());
-        CustomArrayAdapterChallengesIn challengesAdapter = new CustomArrayAdapterChallengesIn(this ,appManager.getCurrentUser().getChallengesParticipations() );
+        Database database = new Database();
+        ArrayList<Challenge> challenges = database.getChallengesByAgeGroup(appManager.getCurrentUser().getAgeGroup());
+
+        CustomArrayAdapterChallengesIn challengesAdapter = new CustomArrayAdapterChallengesIn(this,  appManager.getCurrentUser().getChallengesParticipations() );
+        listViewHandleIn = (ListView) findViewById(R.id.list_view_challenges_in);
+        listViewHandleIn.setAdapter(challengesAdapter);
+
+        CustomArrayAdapterAvailableChallenges challengesAvailableAdapter = new CustomArrayAdapterAvailableChallenges(this, challenges );
+        listViewHandleAvailable = (ListView) findViewById(R.id.list_view_challenges_available);
+        listViewHandleAvailable.setAdapter(challengesAvailableAdapter);
 
         //adding header to the ListView
         LayoutInflater inflater = getLayoutInflater();
-        ViewGroup header = (ViewGroup)inflater.inflate(R.layout.activity_challenges_in_list_header,listViewHandle,false);
-        listViewHandle.addHeaderView(header);
+        ViewGroup header = (ViewGroup)inflater.inflate(R.layout.activity_challenges_in_list_header,listViewHandleIn,false);
+        listViewHandleIn.addHeaderView(header);
 
-        listViewHandle.setAdapter(challengesAdapter);
-
-        listViewHandle.setOnItemClickListener( new CustomOnItemClickListener() );
+        listViewHandleIn.setOnItemClickListener( new CustomOnItemClickListener() );
     }
 
     public class CustomOnItemClickListener implements AdapterView.OnItemClickListener
