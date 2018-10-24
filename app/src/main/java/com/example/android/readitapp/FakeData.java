@@ -199,25 +199,21 @@ public class FakeData
                 R.drawable.anne_green_gables);
         booksHistory.add(book);
 
-
         // Init challenges
 
         challenge = new Challenge("Harry Potter Challenge", AgeGroupsEnum.DRAGONS,
-                new Date(118, Calendar.OCTOBER, 26), new Date(2018, 12, 15),
-                booksHarryPotter, "Info is missing",
+                new Date(118, 12, 1), new Date(119, 1, 29),
+                booksHarryPotter, "Harry Potter is a seven part series (or eight if you include the two part film for the Deathly Hallows). The basic premise of the series is that Harry Potter is the infamous “Boy Who Lived;” referring to of course his survival of the Dark Lord’s wrath as a young infant. When Harry comes of age he learns that all of his strange quirks and abilities were really because he’s a wizard, just like his parents. ",
                 R.drawable.hp_challenge_cover);
         challenges.add(challenge);
 
         challenge = new Challenge("History Challenge", AgeGroupsEnum.DRAGONS,
-                new Date(117,10,1), new Date (2018,1,29),
-                booksHistory,"No info yet",
-                R.drawable.default_picture);
+                new Date(118,10,1), new Date (118,12,23),
+                booksHistory,"Travel through time with this historical reading challenge. Run by Passages to the Past this challenge is a great place to find and give recommendations. Depending on your available reading time you can pick different difficulty levels for this challenge. You might even want to organise your reading list by picking a new time period every month.",
+                R.drawable.history_challange_cover);
         challenges.add(challenge);
 
-
-
         // Init badges.
-
         badges = new ArrayList<>();
         badge = new Badge( "Griffindor Badge", R.drawable.ic_badge_1, new Date(2018, 07, 25) );
         badges.add(badge);
@@ -246,7 +242,6 @@ public class FakeData
         badge = new Badge( "Quidditch Trophy", R.drawable.ic_badge_crown, new Date(2018, 05, 15) );
         badges.add(badge);
 
-
         // Init users list.
         users = new ArrayList<>();
 
@@ -264,8 +259,8 @@ public class FakeData
         returnedBooks.add(booksHarryPotter.get(1));
 
         challengesParticipations = new ArrayList<>();
-        challengesParticipations.add(new ChallengeParticipation(challenges.get(0),500));
-        challengesParticipations.add(new ChallengeParticipation(challenges.get(1),200));
+        challengesParticipations.add(new ChallengeParticipation(challenges.get(0),50));
+        challengesParticipations.add(new ChallengeParticipation(challenges.get(1),20));
 
 
         user = new User(1, pswHash, "Edoardo", AgeGroupsEnum.DRAGONS,
@@ -274,9 +269,7 @@ public class FakeData
 
 
         // Init user 2.
-
         pswHash = appManager.md5("2");
-
 
         achievements = new Achievements( 35, new ArrayList<Badge>(badges) );
 
