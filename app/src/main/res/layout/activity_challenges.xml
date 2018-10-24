@@ -36,6 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <ListView
+        android:visibility="invisible"
         android:id="@+id/list_view_challenges_available"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
