@@ -77,6 +77,10 @@ public class User
         return achievements.getGemsTotal();
     }
 
+    public void addChallengeParticipation( ChallengeParticipation c )
+    {
+        challengesParticipations.add(c);
+    }
 
     public void addGems( int newGems )
     {
@@ -86,12 +90,36 @@ public class User
 
     public void addGemsForChallenge( Book book, int gems )
     {
+        Boolean foundOne = false;
         ArrayList<Book> books;
+
         for( ChallengeParticipation c : challengesParticipations )
         {
             books = c.getChallenge().getBooks();
             if( books.contains(book) )
+            {
                 c.addGems(gems);
+                foundOne = true;
+            }
+
+            if( !foundOne )
+            {
+                Database db = Database.getInstance();
+                ArrayList<Challenge> challenges = db.getChallengesByAgeGroup( this.ageGroup );
+                ChallengeParticipation challengeParticipation;
+
+                for( Challenge c1 : challenges )
+                {
+                    books = c1.getBooks();
+                    if( books.contains(book) )
+                    {
+                        challengeParticipation = new ChallengeParticipation( c1, gems );
+                        addChallengeParticipation(challengeParticipation);
+                    }
+                }
+            }
         }
+
+
     }
 }

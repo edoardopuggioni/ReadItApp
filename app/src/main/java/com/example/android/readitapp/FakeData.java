@@ -129,7 +129,12 @@ public class FakeData
 
         book = new Book("978074232743", "Harry Potter and the Chamber of Secrets",
                 AgeGroupsEnum.DRAGONS,
-                "Harry Potter’s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft And Wizardry for his second year, Harry hears strange whispers echo through empty corridors – and then the attacks start. Students are found as though turned to stone … Dobby’s sinister predictions seem to be coming true. ",
+                "Harry Potter’s summer has included the worst birthday ever, doomy warnings " +
+                        "from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron " +
+                        "Weasley in a magical flying car! Back at Hogwarts School of Witchcraft And " +
+                        "Wizardry for his second year, Harry hears strange whispers echo through empty " +
+                        "corridors – and then the attacks start. Students are found as though turned " +
+                        "to stone … Dobby’s sinister predictions seem to be coming true. ",
                 R.drawable.harry_potter_2_bc);
 
         book.setQuiz(quiz);
@@ -139,7 +144,13 @@ public class FakeData
 
         book = new Book("954074232743","Harry Potter and the Prisoner of Azkaban",
                 AgeGroupsEnum.DRAGONS,
-                "When the Knight Bus crashes through the darkness and screeches to a halt in front of him, it’s the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run – and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry’s tea leaves … But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss",
+                "When the Knight Bus crashes through the darkness and screeches to a halt in " +
+                        "front of him, it’s the start of another far from ordinary year at Hogwarts for " +
+                        "Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord " +
+                        "Voldemort, is on the run – and they say he is coming after Harry. In his " +
+                        "first ever Divination class, Professor Trelawney sees an omen of death in " +
+                        "Harry’s tea leaves … But perhaps most terrifying of all are the Dementors " +
+                        "patrolling the school grounds, with their soul-sucking kiss",
                 R.drawable.harry_potter_3_bc);
 
         booksHarryPotter.add(book);
@@ -148,21 +159,46 @@ public class FakeData
 
         book = new Book("683094232743","Carrie’s War",
                 AgeGroupsEnum.DRAGONS,
-                "Carrie’s War is a coming of age story with a twist. While visiting the small Welsh mining town where she was billeted during World War II, Carrie Willow, a 42 year old widow with four children, tells them the story of her evacuation. At the start of the war, Carrie, then 11 and her younger brother Nick, 9, were put on a train along with so many other school children, to escape the anticipated bombing of London by the Germans. ",
+                "Carrie’s War is a coming of age story with a twist. While visiting the " +
+                        "small Welsh mining town where she was billeted during World War II, " +
+                        "Carrie Willow, a 42 year old widow with four children, tells them the " +
+                        "story of her evacuation. At the start of the war, Carrie, then 11 and " +
+                        "her younger brother Nick, 9, were put on a train along with so many " +
+                        "other school children, to escape the anticipated bombing of London by " +
+                        "the Germans. ",
                 R.drawable.carries_war_bc);
         booksHistory.add(book);
 
         book = new Book("777094232743","The Girl in the Mask",
                 AgeGroupsEnum.DRAGONS,
-                "Sophia and her cousin Jack have been very much on their own, after Sophia's father left four years earlier for Jamaica in the West Indies, where he owns a plantation. When he unexpectedly returns home, bringing Sophia's Aunt Amelia with him, he finds Sophia is not the lady he expected. His steward has been fired by Sophia for stealing from the estate, as well as her governess who was to teach and chaperone her. Instead he finds her learning Latin, Greek and mathematics, all subjects that to her father's thinking won't be of use to her as a married woman. As a lady of birth and breeding he expects her to be accomplished in things that matter; embroidery, painting and dancing.",
+                "Sophia and her cousin Jack have been very much on their own, after " +
+                        "Sophia's father left four years earlier for Jamaica in the West " +
+                        "Indies, where he owns a plantation. When he unexpectedly returns " +
+                        "home, bringing Sophia's Aunt Amelia with him, he finds Sophia is " +
+                        "not the lady he expected. His steward has been fired by Sophia " +
+                        "for stealing from the estate, as well as her governess who was " +
+                        "to teach and chaperone her. Instead he finds her learning Latin, " +
+                        "Greek and mathematics, all subjects that to her father's thinking " +
+                        "won't be of use to her as a married woman. As a lady of birth and " +
+                        "breeding he expects her to be accomplished in things that matter; " +
+                        "embroidery, painting and dancing.",
                 R.drawable.the_girl_in_the_mask);
         booksHistory.add(book);
 
         book = new Book("990074232743","Anne of Green Gables",
                 AgeGroupsEnum.DRAGONS,
-                "Anne of Green Gables, novel by Canadian novelist Lucy Maud Montgomery published in 1908. A charming but sentimental story of a spirited and unconventional orphan girl who finds a home with an elderly couple, the novel was based on the author’s own girlhood experiences and on the rural life and traditions of Prince Edward Island. A former journalist and schoolteacher, Montgomery achieved worldwide success with both adults and children after the novel’s publication. Its six sequels, tracing Anne from girlhood to motherhood, were less popular.",
+                "Anne of Green Gables, novel by Canadian novelist Lucy Maud " +
+                        "Montgomery published in 1908. A charming but sentimental story of " +
+                        "a spirited and unconventional orphan girl who finds a home with an " +
+                        "elderly couple, the novel was based on the author’s own girlhood " +
+                        "experiences and on the rural life and traditions of Prince Edward " +
+                        "Island. A former journalist and schoolteacher, Montgomery achieved " +
+                        "worldwide success with both adults and children after the novel’s " +
+                        "publication. Its six sequels, tracing Anne from girlhood to " +
+                        "motherhood, were less popular.",
                 R.drawable.anne_green_gables);
         booksHistory.add(book);
+
 
         // Init challenges
 
@@ -218,20 +254,14 @@ public class FakeData
 
         pswHash = appManager.md5("1");
 
-        // TODO Fill achievements, empty for now.
         achievements = new Achievements( 50, new ArrayList<Badge>(badges) );
 
         borrowedBooks = new ArrayList<>();
-        borrowedBooks.add(booksHarryPotter.get(0)); // HP1
-        borrowedBooks.add(booksHarryPotter.get(2)); // HP3
+        borrowedBooks.add(booksHarryPotter.get(0));
+        borrowedBooks.add(booksHarryPotter.get(2));
 
         returnedBooks = new ArrayList<>();
         returnedBooks.add(booksHarryPotter.get(1));
-        //returnedBooks.add(booksHarryPotter.get()); // Book4
-        //returnedBooks.add(booksHarryPotter.get(4)); // Book5
-        //returnedBooks.add(booksHarryPotter.get(5)); // Book6
-        //returnedBooks.add(booksHarryPotter.get(6)); // Book7
-        //returnedBooks.add(booksHarryPotter.get(7)); // Book8
 
         challengesParticipations = new ArrayList<>();
         challengesParticipations.add(new ChallengeParticipation(challenges.get(0),500));
@@ -247,8 +277,8 @@ public class FakeData
 
         pswHash = appManager.md5("2");
 
-        // TODO Fill achievements, empty for now.
-//        achievements = new Achievements();
+
+        achievements = new Achievements( 35, new ArrayList<Badge>(badges) );
 
         borrowedBooks = new ArrayList<>();
         borrowedBooks.add(booksHarryPotter.get(0));

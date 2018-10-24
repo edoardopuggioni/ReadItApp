@@ -39,7 +39,6 @@ public class QuizEndActivity extends AppCompatActivity
         user.addGems(correctAnswers);
         user.addGemsForChallenge( quizStatus.getBook(), correctAnswers );
 
-        // TODO Add ChallengeParticipation to user if this is the first book he reads for a challenge.
         // TODO Remove book from returned books.
 
         ImageView gem = findViewById(R.id.quiz_end_gem);
