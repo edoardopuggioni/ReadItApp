@@ -2,6 +2,7 @@ package com.example.android.readitapp;
 
 import android.content.Intent;
 import android.media.Image;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,10 +41,15 @@ public class QuizEndActivity extends AppCompatActivity
         user.addGemsForChallenge( quizStatus.getBook(), correctAnswers );
         user.removeBookFromReturned( quizStatus.getBook() );
 
-        ImageView gem = findViewById(R.id.quiz_end_gem);
         Animation slideLeft = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_left);
+
+        ImageView gem = findViewById(R.id.quiz_end_gem);
         gem.startAnimation(slideLeft);
         gem.setVisibility(View.VISIBLE);
+
+        ConstraintLayout constraintLayout = findViewById(R.id.constraintLayoutBadge);
+        constraintLayout.startAnimation(slideLeft);
+        constraintLayout.setVisibility(View.VISIBLE);
     }
 
     public void goToHomepage( View view )

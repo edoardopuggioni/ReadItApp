@@ -2,9 +2,9 @@
     <string name="app_name">ReadItApp</string>
     <string name="card_number">Card Number</string>
     <string name="password">Password</string>
-    <string name="readit_achievements">ReadIt Achievements</string>
-    <string name="readit_challenges">ReadIt Challenges</string>
-    <string name="readit_quiz">ReadIt Quiz</string>
+    <string name="readit_achievements">Achievements</string>
+    <string name="readit_challenges">Challenges</string>
+    <string name="readit_quiz">Quiz</string>
     <string name="homepage_logout">Logout</string>
     <string name="books_you_are_reading">Books you are reading</string>
     <string name="login">Login</string>
