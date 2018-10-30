@@ -36,10 +36,8 @@ public class CustomArrayAdapterAvailableChallenges extends ArrayAdapter
          TextView list_item_challenge_available_title = (TextView) convertView.findViewById(R.id.challenge_title_available);
         //TextView list_item_challenge_days_to_end_ = (TextView) convertView.findViewById(R.id.challenge_days_to_end_value);
 
-        list_item_challenge_available_title.setText("abc");
+        list_item_challenge_available_title.setText("Famous People Challenge");
         //list_item_challenge_days_to_end_.setText("" +appManager.getCurrentUser().getChallengesParticipations().get(position).getGems());
-
-
         return convertView;
     }
 

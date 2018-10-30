@@ -14,9 +14,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Harry Potter challenge"
+        android:text="Famous People Challenege"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,9 +24,9 @@
         android:id="@+id/days_to_end_value_available"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="20"
+        android:text=" 65"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/days_to_end_label"
         app:layout_constraintStart_toEndOf="@+id/days_to_end_label_available"
         app:layout_constraintTop_toTopOf="@+id/days_to_end_label_available" />
@@ -36,8 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
         android:text="Days to end:"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/challenge_title_available"
         app:layout_constraintTop_toBottomOf="@+id/challenge_title_available" />
 
